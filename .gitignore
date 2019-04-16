@@ -5,3 +5,6 @@
 *.org~
 *.toml~
 .gitignore~
+# hugo
+public/
+exampleSite/public/
