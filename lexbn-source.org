@@ -1,0 +1,458 @@
+#+title: Lex' blog&notes
+#+author: Alexander Seltmann
+
+#+hugo_base_dir: .
+#+options: creator:t
+#+hugo_auto_set_lastmod: t
+
+#+hugo_pandoc_citations: t
+#+bibliography: cite/references.bib
+
+* Homepage
+:PROPERTIES:
+:EXPORT_HUGO_SECTION:
+:EXPORT_HUGO_TYPE: "docs"
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :link-citations true
+:END:
+
+** Hi, I'm Alex
+
+... and this website is my project showcase, a collection of thoughts in a
+structured manner, and maybe even a weblog. The content of this page, especially
+science-related, will be in English. Occasionally, a German text will be posted
+under Notes, which will then be marked [German].
+
+** Whoami?
+
+I am a medical student, currently doing a [[https://en.wikipedia.org/wiki/Doctor_of_Medicine#Germany][Medical Doctorate]] in the [[http://www.biophysical-imaging.com][Biophysical
+Imaging Lab]] of Christian Eggeling in Jena. I enjoy making music and climbing
+rocks.
+
+** Contact
+
+You can get in contact with me by sending an email to =seltmann@posteo.de=. You
+can also find me on [[https://twitter.com/apo_lex][Twitter]], [[https://github.com/aseltmann][Github]]. There is also an old [[https://soundcloud.com/apolex][Soundloud]] hanging
+around in the wild web.
+
+
+* Projects
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/projects
+:END:
+
+
+** Projects
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection true
+:END:
+
+I am a medical student by training. My main research interests revolve around
+machine learning, especially deep learning, for the life sciences. Currently, I
+try to improve reproducibility of fluorescence correlation spectroscopy (FCS)
+analysis using deep learning.
+
+*** Conference talks
+- *Seltmann A*, Eggeling C, Waithe D. Automated, User-independent Correction of
+  Artifacts in Fluorescence Correlation Spectroscopy Measurements using
+  Convolutional Neural Networks. [[https://www.quantitativebioimaging.com/qbi2020/][Quantitative BioImaging Conference (QBI)]]; 2020
+  Jan 6-9; Oxford, UK
+
+
+** Artifact correction in Fluorescence Correlation Spectroscopy measurements
+:PROPERTIES:
+:EXPORT_FILE_NAME: FCS-trace-artifact-correction
+:END:
+
+In a current project, we apply Deep Learning techniques on Fluorescence
+Correlation Spectroscopy (FCS) data to correct a variety of hardware- and
+sample-related artifacts, such as photobleaching, contamination from additional
+slow moving particles, or sudden drops in intensity because of detector
+anomalies.
+
+
+* Notes
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/notes
+:END:
+
+** Notes
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection true
+:END:
+
+Structured arguments and thoughts, often presented in lists.
+
+*Bold*, /italic/, =verbatim=, +strikethrough+
+
+This is a test. And Hugo Book Shortcodes in an org source file:
+
+*** Buttons
+#+BEGIN_EXPORT html
+{{< button relref="/" >}}Get Home{{< /button >}}
+{{< button href="https://github.com/alex-shpak/hugo-book" >}}Contribute{{< /button >}}
+#+END_EXPORT
+
+*** Columns
+#+BEGIN_EXPORT html
+{{< columns >}}
+#### Left Content
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+
+<--->
+
+#### Mid Content
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter!
+
+<--->
+
+#### Right Content
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+{{< /columns >}}
+
+#+END_EXPORT
+
+*** Expand
+#+BEGIN_EXPORT html
+{{< expand "Custom Label" "..." >}}
+## Markdown content
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+{{< /expand >}}
+
+#+END_EXPORT
+
+*** Hints
+#+BEGIN_EXPORT html
+{{< hint info >}}
+**Hint info**
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+{{< /hint >}}
+
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+{{< hint warning >}}
+**Hint warning**
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+{{< /hint >}}
+
+#+END_EXPORT
+
+#+BEGIN_EXPORT html
+{{< hint danger >}}
+**Hint danger**
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+{{< /hint >}}
+#+END_EXPORT
+
+*** Display Mode (KaTeX)
+
+#+BEGIN_EXPORT html
+
+Here is some inline example: {{< katex >}}\pi(x){{< /katex >}}, rendered in the same line. And below is `display` example, having `display: block`
+{{< katex display >}}
+x = \begin{cases}
+   a &\text{if } b \\
+   c &\text{if } d
+\end{cases}
+{{< /katex >}}
+Text continues here.
+
+#+END_EXPORT
+
+This should also be possible in plain org-mode: \pi(x) vs $\pi(x)$ vs \(\pi(x)\)
+
+\begin{equation}
+\label{eq:1}
+C = W\log_{2} (1+\mathrm{SNR})
+\end{equation}
+
+x = \begin{cases}
+   a &\text{if } b \\
+   c &\text{if } d
+\end{cases}
+
+*** Generate SVG charts and diagrams for text (Mermaid)
+
+#+BEGIN_EXPORT html
+{{< mermaid >}}
+sequenceDiagram
+    Alice->>Bob: Hello Bob, how are you?
+    alt is sick
+        Bob->>Alice: Not so good :(
+    else is well
+        Bob->>Alice: Feeling fresh like a daisy
+    end
+    opt Extra response
+        Bob->>Alice: Thanks for asking
+    end
+{{< /mermaid >}}
+#+END_EXPORT
+
+*** Tabs
+#+BEGIN_EXPORT html
+{{< tabs "uniqueid" >}}
+{{< tab "MacOS" >}}
+# MacOS
+
+This is tab **MacOS** content.
+
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+{{< /tab >}}
+
+{{< tab "Linux" >}}
+
+# Linux
+
+This is tab **Linux** content.
+
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+{{< /tab >}}
+
+{{< tab "Windows" >}}
+
+# Windows
+
+This is tab **Windows** content.
+
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+{{< /tab >}}
+{{< /tabs >}}
+
+#+END_EXPORT
+
+
+** crit_sci / crit_med
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_SECTION: docs/notes/kritmed
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookFlatSection true
+:END:
+
+** Absichtlich Daten verfälschen [German]
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/notes/kritmed
+:EXPORT_FILE_NAME: falsche-daten
+:END:
+*** Absichtlich Daten verfälschen
+
+Im Fachmagazin Nature schlagen zwei Autoren vor, Daten absichtlich zu
+verfälschen. Das ist eine bemerkenswerte Idee.
+
+Im Ernst. Der Psychologe Robert McCaun und der Physiker Saul Perlmutter haben im
+Fachmagazin Nature die breite Anwendung von "blinder Analyse" propagiert, um
+"wissenschaftliche Vorurteile" gezielt zu minimieren. Denn all zu oft,
+argumentieren die Autoren, versuchen Wissenschaftler nur das zu bestätigen, was
+sie ohnehin schon glauben. Alle Messergebnisse, die ihre Hypothese  bestätigen,
+werden sofort akzeptiert. Alles, was nicht dazu passt, wird erstmal wie ein
+Messfehler behandelt. Sprich: gelöscht.
+
+Dass auch ganz gewöhnliche Wald- und Wiesenwissenschaftler ihre Daten gerne
+höchst selektiv auswerten, ist natürlich nicht erst seit gestern bekannt. Ich
+erinnere mich, dass es einschlägige Witze darüber schon gab, als ich noch an der
+Diplomarbeit saß. Aber damit soll nun Schluss sein.
+
+Man muss nur die Wahrheit verstecken, damit sie besser gefunden wird. Das könnte
+so gehen: Ich mache aus meinem gemessenen Datensatz - sagen wir mal - fünf
+Datensätze. Und in vier von diesen fünf Datensätze lasse ich per Software
+zufällige, oder systematische Fehler einbauen. Ach ja, um was für Maßeinheiten
+es sich handelt, verrate ich natürlich auch nicht.
+
+Das ist im Prinzip ein bisschen so, wie die berühmten Doppelblindstudien bei
+Medikamenten: Es gibt eine Vergleichsgruppe, die nur Placebos bekommt, und eine
+Gruppe, denen echte Medikamente verabreicht werden. Dann schicke ich die
+Datensätze zu befreundeten Forschungsgruppen und lasse sie analysieren. Wenn ich
+tatsächlich einen Effekt gemessen habe, dann finden die Kollegen das auch
+heraus.
+
+Schöne Idee, finde ich. Das ganze könnte nicht nur dazu führen, dass so mancher
+Forscher aus einer theoretischen Sackgasse herausfindet. Sie könnte auch der
+Wissenschaft zu einer völlig neuen Glaubwürdigkeit verhelfen - zum Beispiel in
+der Klimadebatte.
+
+Ich fürchte nur, dass auch diese Revolution wieder mal ausbleiben wird. Denn zum
+einen würde ich mal schätzen, dass dem ganz überwiegenden Teil junger
+Wissenschaftlerinnen und Wissenschaftler nicht mal das Problem so richtig klar
+ist. Weil eine kritische Sicht auf die eigenen Methoden in der Ausbildung in der
+Regel gar nicht vorkommt. Und zweitens weil diese Art der Analyse eine große
+Gefahr birgt: Es kann auch sein, dass die Blindanalyse an den Tag bringt, dass
+es eigentlich gar nichts zu entdecken gibt. Und dann stehe ich da, mit meinen
+schönen Daten. Die sind dann verbrannt. Aber niemand gibt gerne zu, dass er das
+letzte halbe Jahr umsonst gearbeitet hat.
+
+Aber vielleicht bin ich ja zu pessimistisch. Zu hoffen wäre es.
+
+** Other critical stuff
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/notes/kritmed
+:EXPORT_FILE_NAME: other-critical
+:END:
+
+Here is other critical stuff.
+
+** International
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index
+:EXPORT_HUGO_SECTION: docs/notes/international
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookFlatSection true
+:END:
+
+** Africa
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/notes/international
+:EXPORT_FILE_NAME: africa
+:CUSTOM_ID: africa
+:END:
+
+#+BEGIN_EXPORT html
+{{< tabs "uniqueid" >}}
+{{< tab "MacOS" >}}
+# MacOS
+
+This is tab **MacOS** content.
+
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+{{< /tab >}}
+
+{{< tab "Linux" >}}
+
+# Linux
+
+This is tab **Linux** content.
+
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+{{< /tab >}}
+
+{{< tab "Windows" >}}
+
+# Windows
+
+This is tab **Windows** content.
+
+Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
+stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
+protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
+Miseratus fonte Ditis conubia.
+{{< /tab >}}
+{{< /tabs >}}
+
+#+END_EXPORT
+
+And here is anotcher bit of blah with a footnote citation.[fn:1]
+
+
+
+[fn:1]
+
+** Asia
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/notes/international
+:EXPORT_FILE_NAME: asia
+:END:
+
+Another continent to describe.
+
+* Blog Posts
+# the blog posts are displayed by a simple html list and inserted before the
+# menu main thanks to /themes/book/layouts/partials/docs/inject/menu-before.html
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: posts
+:END:
+
+** TODO One Bad Night                                  :@updates:herpes:fear:
+:PROPERTIES:
+:EXPORT_FILE_NAME: bad-night
+:END:
+Someone gave me herpes! Oh no!
+
+** DONE One Bad Day
+   CLOSED: [2020-02-01 Sa 20:02]
+:PROPERTIES:
+:EXPORT_FILE_NAME: bad-day
+:END:
+Someone gave me diarrhea! Oh no!
+** TODO Reading "The Shadow of the Sun" by Ryszard Kapuściński :@books:
+:PROPERTIES:
+:EXPORT_FILE_NAME: shadow-of-sun
+:END:
+General impression: thoughtful book, mostly he tries to avoid [[https://www.youtube.com/watch?v=D9Ihs241zeg][single stories]] and
+gives an impression of different scenes in or between different African
+countries from the end of the 1950s till the 1990s. From time to time he tries
+to explain certain view or mentalities in African countries, which might come of
+as condescending from todays view and be of more interest to non-African readers
+than to African readers.
+
+#+hugo: more
+
+In this blog post I will share the more impressionist quotes I liked, while some
+historical takeaways will be collected in [[#africa][Notes]]
+
+**** p 29: Course and temperature of the /first greeting/ defines fate of the relationship
+- from very first second: exhibit enormous primal joy and geniality
+- extend hand in large, vigorous gesture
+- loud /laughter/, many questions
+**** p 36ff.: colonial heritage
+- a state wherein the civil servant received renumeration beyond all measure
+  and reason (white low burocratic suddenly gets villa, servants, ...)
+  + after independence this system gives fast rise to new elites
+  + french: /la politique du ventre/ (... of the stomach)
+- 10.000 kingodms, federations and stateless, but independent tribal
+  associations crammed in ~40 colonies! (without asking)
+- ports - only leeches on the body of Africa, points of export for slaves,
+  gold and ivory
+- p52: *Why Indians built the railway*
+  + White worker from Europe \to was master, could not do physical labour
+  + African worker \to "did not exist", the concept of wages was missing and
+    British had system of forced labour later
+- p82: *Islands around Africa*
+  + Were bases for sailors, merchants, and robbers (especially Europeans)
+  + For unstable African boats hard to reach \to spot for concentration camps
+    for slave trade
+- p83: The philosophy that inspired the construction of [[https://en.wikipedia.org/wiki/Kolyma_Tales][Kolyma]] and [[https://en.wikipedia.org/wiki/Auschwitz_concentration_camp][Auschwitz]],
+  one of obsessive content and hatred, vileness and brutality, was formulated
+  and set down centuries earlier by the captains of the /Martha/ and the /Progress/,
+  the [[https://en.wikipedia.org/wiki/Mary_Ann_(1772_ship)][Marie Ann]] and the /Rainbow/
+**** p60: Secrets of Serengeti
+- lions attacking humans \to are old outcasts
+- where are the elephant cemetries \to on bottom of lakes
+**** Europeans, Africans and Racism
+- p70: Poland vs Tansania
+  + children asking Ryszard in Poland "And did you see many cannibals?"
+  + Mothers in Tanganyika to their children: "You had better be good, or else
+    the /mzungu/ (Swahili: the white man, the European) will eat you!"
+- p110: So often I had felt irritated with people who arrived here, lived in
+  "little Europe" or "little America" (ee.g. in luxury hotels), and departed,
+  bragging later that they had been to Africa, a place that in reality they had
+  never seen.
