@@ -1,0 +1,11 @@
++++
+title = "Africa"
+author = ["Alexander Seltmann"]
+lastmod = 2020-03-07T12:53:21+01:00
+draft = false
+creator = "Emacs 26.3 (Org mode 9.1.9 + ox-hugo)"
++++
+
+And here is anotcher bit of blah with a footnote citation.[^fn:1]
+
+[^fn:1]: See link.
