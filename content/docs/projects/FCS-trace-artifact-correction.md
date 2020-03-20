@@ -1,7 +1,7 @@
 +++
 title = "Artifact correction in Fluorescence Correlation Spectroscopy measurements"
 author = ["Alexander Seltmann"]
-lastmod = 2020-03-20T14:56:37+01:00
+lastmod = 2020-03-20T18:02:25+01:00
 draft = false
 creator = "Emacs 26.3 (Org mode 9.1.9 + ox-hugo)"
 +++
