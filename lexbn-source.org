@@ -347,12 +347,20 @@ And here is anotcher bit of blah with a footnote citation.[fn:1]
 
 Another continent to describe.
 
+
 * Blog Posts
 # the blog posts are displayed by a simple html list and inserted before the
 # menu main thanks to /themes/book/layouts/partials/docs/inject/menu-before.html
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: posts
 :END:
+** DONE Test post
+   CLOSED: [2020-03-23 Mo 14:31]
+:PROPERTIES:
+:EXPORT_FILE_NAME: test-post
+:END:
+
+Test post text.
 
 ** TODO Reading "The Shadow of the Sun" by Ryszard Kapuściński :@books:
 :PROPERTIES:

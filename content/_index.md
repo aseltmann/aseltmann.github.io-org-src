@@ -1,7 +1,7 @@
 +++
 title = "Homepage"
 author = ["Alexander Seltmann"]
-lastmod = 2020-03-20T18:02:24+01:00
+lastmod = 2020-03-23T14:32:36+01:00
 type = "docs"
 draft = false
 creator = "Emacs 26.3 (Org mode 9.1.9 + ox-hugo)"

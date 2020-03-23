@@ -1,7 +1,7 @@
 +++
 title = "Reading \"The Shadow of the Sun\" by Ryszard Kapuściński"
 author = ["Alexander Seltmann"]
-lastmod = 2020-03-20T18:02:27+01:00
+lastmod = 2020-03-23T14:32:38+01:00
 categories = ["books"]
 draft = true
 creator = "Emacs 26.3 (Org mode 9.1.9 + ox-hugo)"
