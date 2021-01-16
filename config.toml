@@ -13,7 +13,7 @@ enableGitInfo = true
 disqusShortname = "lexbn"
 
 
-[params]
+[Params]
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
   # You can also specify this parameter per page in front matter.
@@ -33,12 +33,12 @@ disqusShortname = "lexbn"
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  BookRepo = 'https://github.com/aseltmann/lexbn'
+  BookRepo = 'https://github.com/aseltmann/aseltmann.github.io-org-src'
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Path must point to 'content' directory of repo.
-  BookEditPath = 'edit/master/content'
+  BookEditPath = 'edit/main/content'
 
   # Configure the date format used on the pages
   # - In git information
@@ -57,11 +57,11 @@ disqusShortname = "lexbn"
   BookComments = true
 
   # github_user = "aseltmann"
-  # github_repo = "lexbn"
+  # github_repo = "aseltmann.github.io-org-src"
   # github_banner = true
 
   [Params.source]
-    url = "https://github.com/aseltmann/lexbn"
+    url = "https://github.com/aseltmann/aseltmann.github.io-org-src"
     org_dir = "/"
     org_file = "lexbn-source.org"
 

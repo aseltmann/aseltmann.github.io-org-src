@@ -1,0 +1,12 @@
+{
+    "theme": "neutral",
+    "securityLevel": "loose",
+    "startOnLoad": true,
+    "flowchart": {
+        "useMaxWidth": true,
+        "htmlLabels": true,
+        "curve": "basis",
+        "nodeSpacing": "50",
+        "rankSpacing": "50"
+  }
+}

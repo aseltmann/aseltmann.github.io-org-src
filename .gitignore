@@ -1,0 +1,7 @@
+# Emacs stuff
+*.md~
+*.bib~
+*.sh~
+*.org~
+*.toml~
+.gitignore~

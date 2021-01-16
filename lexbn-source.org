@@ -39,9 +39,12 @@ rocks.
 You can get in contact with me by sending an email to =seltmann (at) posteo
 (dot) de=. You
 can also find me on [[https://twitter.com/aseltmannio][Twitter]], [[https://github.com/aseltmann][Github]].
-
+** Latest Tweets
 #+BEGIN_EXPORT html
-<a class="twitter-timeline" data-dnt="true" data-theme="light" href="https://twitter.com/aseltmannio?ref_src=twsrc%5Etfw">Tweets by aseltmannio</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: scroll;">
+<a class="twitter-timeline" data-dnt="true" data-theme="light" href="https://twitter.com/aseltmannio?ref_src=twsrc%5Etfw">Tweets by aseltmannio</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 #+END_EXPORT
 
 * Homepage
@@ -69,11 +72,16 @@ Forschung haben.
 Ich bin Medizinstudent, arbeite an einer medizinischen Doktorarbeit in der
 [[http://www.biophysical-imaging.com][Biophysical Imaging Gruppe]] von Christian Eggeling in Jena.
 
-** Contact
-
+** Kontakt
 Ich bin per Email erreichbar unter =seltmann (at) posteo
 (dot) de=. Weiterhin bin ich zu finden auf [[https://twitter.com/aseltmannio][Twitter]] und [[https://github.com/aseltmann][Github]].
-
+** Neueste Tweets
+#+BEGIN_EXPORT html
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: scroll;">
+<a class="twitter-timeline" data-dnt="true" data-theme="light" href="https://twitter.com/aseltmannio?ref_src=twsrc%5Etfw">Tweets by aseltmannio</a>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+#+END_EXPORT
 * Projects
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: docs/projects
@@ -109,7 +117,6 @@ Ich bin per Email erreichbar unter =seltmann (at) posteo
   Artifacts in Fluorescence Correlation Spectroscopy Measurements using
   Convolutional Neural Networks. [[https://www.quantitativebioimaging.com/qbi2020/][Quantitative BioImaging Conference (QBI)]]; 2020
   Jan 6-9; Oxford, UK
-
 
 * Projekte
 :PROPERTIES:
@@ -503,7 +510,6 @@ Here is other critical stuff.
 
 Another continent to describe.
 
-
 ** TODO Philosophy
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index.en.md
@@ -717,20 +723,6 @@ end
 
 {{< /mermaid >}}
 #+END_EXPORT
-
-{
-  "theme": "default",
-  "logLevel": "5",
-  "securityLevel": "loose",
-  "flowchart":{
-      "htmlLabels":true,
-      "curve": "basis",
-      "nodeSpacing": "50",
-      "rankSpacing": 50,
-      "useMaxWidth": true
-    }
-}
-
 
 * Blog Posts
 # the blog posts are displayed by a simple html list and inserted before the

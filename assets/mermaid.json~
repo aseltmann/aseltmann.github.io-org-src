@@ -1,0 +1,13 @@
+{
+    "flowchart": {
+        "useMaxWidth": true
+        "htmlLabels": true,
+        "curve": "basis",
+        "nodeSpacing": "50",
+        "rankSpacing": "50",
+        "useMaxWidth": true
+  },
+    "theme": "default",
+    "logLevel": "5",
+    "securityLevel": "loose"
+}
