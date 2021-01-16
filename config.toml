@@ -1,16 +1,23 @@
-baseURL = "http://example.org/"
+baseURL = "https://aseltmann.github.io/"
 languageCode = "en-us"
-title = "Lex' blog&notes"
+title = "Blog & Notes"
 theme = "book"
 author = "Alex Seltmann"
+DefaultContentLanguage = "en"
 
+# Book configuration
+disablePathToLower = true
+enableGitInfo = true
+
+# disqus setup
+disqusShortname = "lexbn"
 
 
 [params]
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.
   # You can also specify this parameter per page in front matter.
-  #  BookToC = true
+  BookToC = true
 
   # (Optional, default none) Set the path to a logo for the book. If the logo is
   # /static/logo.png then the path would be logo.png
@@ -22,16 +29,16 @@ author = "Alex Seltmann"
 
   # (Optional, default docs) Specify section of content to render as menu
   # You can also set value to '*' to render all sections to menu
-  # BookSection = 'docs'
+  BookSection = 'docs'
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
-  #  BookRepo = 'https://github.com/alex-shpak/hugo-book'
+  BookRepo = 'https://github.com/aseltmann/lexbn'
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Path must point to 'content' directory of repo.
-  #  BookEditPath = 'edit/master/exampleSite/content'
+  BookEditPath = 'edit/master/content'
 
   # Configure the date format used on the pages
   # - In git information
@@ -41,10 +48,54 @@ author = "Alex Seltmann"
 
   # (Optional, default true) Enables search function with flexsearch,
   # Index is built on fly, therefore it might slowdown your website.
- # BookSearch = true
+  BookSearch = true
 
   # (Optional, default true) Enables comments template on pages
   # By default partals/docs/comments.html includes Disqus template
   # See https://gohugo.io/content-management/comments/#configure-disqus
   # Can be overwritten by same param in page frontmatter
   BookComments = true
+
+  # github_user = "aseltmann"
+  # github_repo = "lexbn"
+  # github_banner = true
+
+  [Params.source]
+    url = "https://github.com/aseltmann/lexbn"
+    org_dir = "/"
+    org_file = "lexbn-source.org"
+
+  # [Params.sidebar]
+    # github_button  = true
+
+    # Mon Sep 04 23:55:36 EDT 2017 - kmodi
+    # Disable this option for now.. but seems to be useful in future
+    # show_relations = true
+
+ [Params.footer]
+    copyright = ""
+    show_powered_by = true
+
+ [markup]
+ [markup.goldmark.renderer]
+   unsafe = true
+
+
+#   [markup.tableOfContents]
+#     endLevel = 3
+#     ordered = true
+#     startLevel = 2
+
+
+# Multi-lingual mode config
+# There are different options to translate files
+# See https://gohugo.io/content-management/multilingual/#translation-by-filename
+# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+[languages]
+[languages.en]
+  languageName = 'English'
+  weight = 1
+
+[languages.de]
+  languageName = 'Deutsch'
+  weight = 2

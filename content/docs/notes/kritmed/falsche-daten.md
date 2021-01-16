@@ -1,11 +1,20 @@
 +++
 title = "Critical test section"
 author = ["Alexander Seltmann"]
-lastmod = 2020-03-23T14:32:37+01:00
-draft = false
-creator = "Emacs 26.3 (Org mode 9.1.9 + ox-hugo)"
+lastmod = 2021-01-14T20:34:08+01:00
+draft = true
+creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
 +++
 
-## test section {#test-section}
+## <span class="org-todo todo TODO">TODO</span> test section {#test-section}
 
 Test section text.
+
+{{< tabs "uniqueid" >}}
+{{< tab "test" >}}
+
+foo[^1]
+[^1]: bar
+
+{{< /tab >}}
+{{< /tabs >}}

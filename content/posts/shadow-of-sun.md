@@ -1,11 +1,14 @@
 +++
 title = "Reading \"The Shadow of the Sun\" by Ryszard Kapuściński"
 author = ["Alexander Seltmann"]
-lastmod = 2020-03-23T14:32:38+01:00
+lastmod = 2021-01-14T20:34:10+01:00
 categories = ["books"]
 draft = true
-creator = "Emacs 26.3 (Org mode 9.1.9 + ox-hugo)"
+creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
 +++
+
+-   State "TODO"       from "PENDING"    <span class="timestamp-wrapper"><span class="timestamp">[2021-01-13 Mi 23:24]</span></span>
+-   State "PENDING"    from "DONE"       <span class="timestamp-wrapper"><span class="timestamp">[2021-01-13 Mi 23:24]</span></span>
 
 General impression: thoughtful book, mostly he tries to avoid [single stories](https://www.youtube.com/watch?v=D9Ihs241zeg) and
 gives an impression of different scenes in or between different African
@@ -67,3 +70,8 @@ historical takeaways will be collected in [Notes]({{< relref "africa" >}})
     "little Europe" or "little America" (ee.g. in luxury hotels), and departed,
     bragging later that they had been to Africa, a place that in reality they had
     never seen.
+
+
+## wonders {#wonders}
+
+-   Lalibela: 11 great churches carved in stone and misery

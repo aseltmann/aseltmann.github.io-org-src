@@ -1,18 +1,18 @@
-#+title: Lex' blog&notes
+#+title: @lexseltmann
 #+author: Alexander Seltmann
-
 #+hugo_base_dir: .
 #+options: creator:t
 #+hugo_auto_set_lastmod: t
 
 #+hugo_pandoc_citations: t
 #+bibliography: cite/references.bib
+#+bibliography: cite/books.bib
 
 * Homepage
 :PROPERTIES:
 :EXPORT_HUGO_SECTION:
 :EXPORT_HUGO_TYPE: "docs"
-:EXPORT_FILE_NAME: _index
+:EXPORT_FILE_NAME: _index.en.md
 :EXPORT_HUGO_MENU: :menu "main"
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :link-citations true
 :END:
@@ -26,41 +26,83 @@ Please return later for more up-to-date information.
 ** Hi, I'm Alex
 
 ... and this website is my project showcase, a collection of thoughts in a
-structured manner, and maybe even a weblog. The content of this page, especially
-science-related, will be in English. Occasionally, a German text will be posted
-under Notes, which will then be marked [German].
+structured manner, and maybe even a weblog.
 
 ** Whoami?
 
-I am a medical student, currently doing a [[https://en.wikipedia.org/wiki/Doctor_of_Medicine#Germany][Medical Doctorate]] in the [[http://www.biophysical-imaging.com][Biophysical
+I am a medical student, currently doing a  [[https://en.wikipedia.org/wiki/Doctor_of_Medicine#Germany][Medical Doctorate]] in the [[http://www.biophysical-imaging.com][Biophysical
 Imaging Lab]] of Christian Eggeling in Jena. I enjoy making music and climbing
 rocks.
 
 ** Contact
 
-You can get in contact with me by sending an email to =seltmann@posteo.de=. You
-can also find me on [[https://twitter.com/apo_lex][Twitter]], [[https://github.com/aseltmann][Github]]. There is also an old [[https://soundcloud.com/apolex][Soundloud]] hanging
-around in the wild web.
+You can get in contact with me by sending an email to =seltmann (at) posteo
+(dot) de=. You
+can also find me on [[https://twitter.com/aseltmannio][Twitter]], [[https://github.com/aseltmann][Github]].
 
+#+BEGIN_EXPORT html
+<a class="twitter-timeline" data-dnt="true" data-theme="light" href="https://twitter.com/aseltmannio?ref_src=twsrc%5Etfw">Tweets by aseltmannio</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+#+END_EXPORT
 
+* Homepage
+:PROPERTIES:
+:EXPORT_HUGO_SECTION:
+:EXPORT_FILE_NAME: _index.de.md
+:END:
+
+#+BEGIN_EXPORT html
+{{< hint danger >}}
+**SITE UNDER CONSTRUCTION**
+Please return later for more up-to-date information.
+{{< /hint >}}
+#+END_EXPORT
+
+** Hallo, ich bin Alex
+
+... und diese Website gibt einen Überblick über meine Projekte, eine Sammlung an
+Notizen und einen Weblog. Die Inhalte dieser Seite werden vor allem in
+Englischer Sprache verfasst sein, insbesondere wenn sie Verbindungen zu meiner
+Forschung haben.
+
+** Whoami?
+
+Ich bin Medizinstudent, arbeite an einer medizinischen Doktorarbeit in der
+[[http://www.biophysical-imaging.com][Biophysical Imaging Gruppe]] von Christian Eggeling in Jena.
+
+** Contact
+
+Ich bin per Email erreichbar unter =seltmann (at) posteo
+(dot) de=. Weiterhin bin ich zu finden auf [[https://twitter.com/aseltmannio][Twitter]] und [[https://github.com/aseltmann][Github]].
 
 * Projects
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: docs/projects
 :END:
 
-
 ** Projects
 :PROPERTIES:
-:EXPORT_FILE_NAME: _index
-:EXPORT_HUGO_MENU: :menu "main"
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection true
+:EXPORT_FILE_NAME: _index.en.md
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
 :END:
 
-I am a medical student by training. My main research interests revolve around
-machine learning, especially deep learning, for the life sciences. Currently, I
-try to improve reproducibility of fluorescence correlation spectroscopy (FCS)
-analysis using deep learning.
+*** Current projects
+    I am a believer in the principles of Open Science, Open Data and Open
+    Source. Thus, I am currently working on a reproducible way of conducting my
+    research on simulation of Fluorescence Correlation Spectroscopy (FCS)
+    measurements and correcting artifacts using neural networks, such as
+    Convolutional Neural Nets (CNNs). I do not have my workflow fixed yet, but
+    to have an insight in my current approach - and with the principles of
+    [[https://en.wikipedia.org/wiki/Open-notebook_science][Open-notebook science]] in mind:
+
+    #+BEGIN_EXPORT html
+    <a href="https://aseltmann.github.io/fluotracify/">Fluotracify - doctoral research project done in a reproducible way</a>
+    #+END_EXPORT
+
+    Description: In a current project, we apply Deep Learning techniques on Fluorescence
+    Correlation Spectroscopy (FCS) data to correct a variety of hardware- and
+    sample-related artifacts, such as photobleaching, contamination from additional
+    slow moving particles, or sudden drops in intensity because of detector
+    anomalies.
 
 *** Conference talks
 - *Seltmann A*, Eggeling C, Waithe D. Automated, User-independent Correction of
@@ -69,17 +111,32 @@ analysis using deep learning.
   Jan 6-9; Oxford, UK
 
 
-** Artifact correction in Fluorescence Correlation Spectroscopy measurements
+* Projekte
 :PROPERTIES:
-:EXPORT_FILE_NAME: FCS-trace-artifact-correction
+:EXPORT_HUGO_SECTION: docs/projects
+:END:
+** Projekte
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index.de.md
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
 :END:
 
-In a current project, we apply Deep Learning techniques on Fluorescence
-Correlation Spectroscopy (FCS) data to correct a variety of hardware- and
-sample-related artifacts, such as photobleaching, contamination from additional
-slow moving particles, or sudden drops in intensity because of detector
-anomalies.
+*** Aktuelle Projekte
+    Ich glaube an die Prinzipien von Open Science, Open Data und Open Source.
+    Daher arbeite ich aktuell daran, meine Forschung an
+    Fluoreszenzkorrelationsspektroskopie (FCS) und Maschinellem Lernen in einer
+    offenen Art und Weise verfügbar zu machen. Im Sinne der [[https://en.wikipedia.org/wiki/Open-notebook_science][Open-notebook
+    science]] ist hier ein Einblick in meine aktuelle Forschung zu finden:
 
+    #+BEGIN_EXPORT html
+    <a href="https://aseltmann.github.io/fluotracify/">Fluotracify - eine reproduzierbare Doktorarbeit [Englisch]</a>
+    #+END_EXPORT
+
+*** Präsentationen auf Konferenzen
+- *Seltmann A*, Eggeling C, Waithe D. Automated, User-independent Correction of
+  Artifacts in Fluorescence Correlation Spectroscopy Measurements using
+  Convolutional Neural Networks. [[https://www.quantitativebioimaging.com/qbi2020/][Quantitative BioImaging Conference (QBI)]]; 2020
+  Jan 6-9; Oxford, UK
 
 * Notes
 :PROPERTIES:
@@ -88,9 +145,38 @@ anomalies.
 
 ** Notes
 :PROPERTIES:
-:EXPORT_FILE_NAME: _index
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection true
+:EXPORT_FILE_NAME: _index.en.md
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
 :END:
+
+** Test page
+  :PROPERTIES:
+  :EXPORT_HUGO_SECTION: docs/notes/test
+  :EXPORT_FILE_NAME: test-page
+  :END:
+*** Year numbering system
+#+BEGIN_EXPORT html
+{{< hint info >}}
+**I use the [Holocene Era or Human Era](https://en.wikipedia.org/wiki/Holocene_calendar) numbering system**. It adds exactly 10,000 years to the currently dominant AD/BC or CE/BCE numbering system. It is denoted **HE/BHE** and allows for all key dates in human history to be listed using a simle increasing date scale - while keeping the transition from the CE calendar easy: you just add the digit "1" before the current year. _Welcome to the year 12,020 HE!_
+{{< /hint >}}
+#+END_EXPORT
+
+Examples:
+
+| Human Era year | Common Era year | Event                  |
+|----------------+-----------------+------------------------|
+|            <r> |             <r> |                        |
+|        1001 HE |        9000 BCE | [[https://en.wikipedia.org/wiki/Jericho][Jericho]]                |
+|        7301 HE |        2700 BCE | [[https://en.wikipedia.org/wiki/Pyramid_of_Djoser][First pyramid]]          |
+|       11460 HE |         1460 CE | [[https://en.wikipedia.org/wiki/Machu_Picchu][Machu Picchu built]]     |
+|       11945 HE |         1945 CE | [[https://en.wikipedia.org/wiki/United_Nations][United Nations founded]] |
+
+Wonderful illustration of the case for the Human Era (courtesy of
+[kurzgesagt.org](https://kurzgesagt.org)):
+
+#+BEGIN_SRC html
+{{< youtube czgOWmtGVGs >}}
+#+END_SRC
 
 Structured arguments and thoughts, often presented in lists.
 
@@ -132,15 +218,27 @@ Miseratus fonte Ditis conubia.
 
 *** Expand
 #+BEGIN_EXPORT html
-{{< expand "Custom Label" "..." >}}
+{{< details "Custom Label" "..." >}}
 ## Markdown content
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
 stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
 Miseratus fonte Ditis conubia.
-{{< /expand >}}
+{{< /details >}}
 
 #+END_EXPORT
+
+#+begin_details
+Here are the /details/.
+#+end_details
+
+#+attr_html: :open t
+#+begin_details
+#+begin_summary
+Some *Summary*
+#+end_summary
+Here are the /details/.
+#+end_details
 
 *** Hints
 #+BEGIN_EXPORT html
@@ -186,10 +284,13 @@ Text continues here.
 
 This should also be possible in plain org-mode: \pi(x) vs $\pi(x)$ vs \(\pi(x)\)
 
+This works, but requires MathJax:
+
 \begin{equation}
 \label{eq:1}
 C = W\log_{2} (1+\mathrm{SNR})
 \end{equation}
+
 
 x = \begin{cases}
    a &\text{if } b \\
@@ -254,24 +355,36 @@ Miseratus fonte Ditis conubia.
 
 #+END_EXPORT
 
-
-** Science & Medicine
+** TODO Science & Medicine
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_SECTION: docs/notes/kritmed
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookFlatSection true
 :END:
 
-** Critical test section
+** TODO Critical test section
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: docs/notes/kritmed
 :EXPORT_FILE_NAME: falsche-daten
 :END:
-*** test section
 
+*** TODO test section
 Test section text.
 
-** Other critical stuff
+# {{< fa github >}}
+
+#+BEGIN_EXPORT html
+{{< tabs "uniqueid" >}}
+{{< tab "test" >}}
+
+foo[^1]
+[^1]: bar
+
+{{< /tab >}}
+{{< /tabs >}}
+#+END_EXPORT
+
+** TODO Other critical stuff
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: docs/notes/kritmed
 :EXPORT_FILE_NAME: other-critical
@@ -279,73 +392,344 @@ Test section text.
 
 Here is other critical stuff.
 
-** International
+** TODO International
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index
 :EXPORT_HUGO_SECTION: docs/notes/international
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookFlatSection true
 :END:
 
-** Africa
+** TODO Africa
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: docs/notes/international
 :EXPORT_FILE_NAME: africa
 :CUSTOM_ID: africa
 :END:
 
+*** Notes on specific countries
+
 #+BEGIN_EXPORT html
 {{< tabs "uniqueid" >}}
-{{< tab "MacOS" >}}
-# MacOS
+{{< tab "Ghana" >}}
 
-This is tab **MacOS** content.
+# Ghana
+- [Kwame Nkrumah](https://en.wikipedia.org/wiki/Kwame_Nkrumah)[^1]
+  + Pan-African while studying in America
+  + returned home 11947 HE
+  + founded party → slogan "Independence now!"
+  + 11957 HE Independence and Accra center of independence movements
+- Ashanti[^1]
+  + tribe
+    * e.g. Ashanti, consists of 8 clans
+    * king: _Ashantehene_
+    * territorial, cultural, political community
+  + clan → all those who believe they have a common ancestor
+    * secual relations between clan-members forbidden!
+  + clan chief
+    * voted for by council (elders, functionaries, ...)
+    * because holy person in moment of election → no walking barefoot, others may not touch him, ...
+    * main task: communication between ancestors and living
+    * has to step down, if: drunk, gluttoning, collusion with sorceror, bad speech about people, not asking elders about opinions
 
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
-Miseratus fonte Ditis conubia.
+
+[^1]: Kapuscinski, Ryszard. The Shadow of the Sun. Penguin, 2002.
+
+
 {{< /tab >}}
 
-{{< tab "Linux" >}}
+{{< tab "Tansania" >}}
 
-# Linux
+# Zanzibar
+## Mid 120th-century
+- "sad, dark star". Arabs from Persian Gulf conquered island with best stretches of land + hotspot of [Arab slave trade](https://en.wikipedia.org/wiki/Arab_slave_trade)[^1]
+- population[^1]
+  + 20% ruling Arabs
+    * ruler: Sultan
+    * want independence from Britain
+  + 80% laboring Africans
+    * [Afro-Shirazi Party (ASP)]([https://en.wikipedia.org/wiki/Afro-Shirazi_Party) headed by [Karume](https://en.wikipedia.org/wiki/Abeid_Karume) + [John Okello](https://en.wikipedia.org/wiki/John_Okello) (revolutionary)
+    * want independence from Britain AND Arabs
 
-This is tab **Linux** content.
+[^1]: Kapuscinski, Ryszard. The Shadow of the Sun. Penguin, 2002.
 
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
-Miseratus fonte Ditis conubia.
+
 {{< /tab >}}
 
-{{< tab "Windows" >}}
+{{< tab "Ethiopia" >}}
 
-# Windows
-
-This is tab **Windows** content.
-
-Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
-stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-protulit, sed sed aere valvis inhaesuro Pallas animam: qui _quid_, ignes.
-Miseratus fonte Ditis conubia.
+# Ethiopia
+- emperor [Haile Selassi](https://en.wikipedia.org/wiki/Haile_Selassie) in power till 11974 HE.
+- dictator [Mengistu Haile Mariam](https://en.wikipedia.org/wiki/Mengistu_Haile_Mariam) in power 11974 - 11991 HE.
+- 11983-85 HE: [great famine](https://en.wikipedia.org/wiki/1983%E2%80%931985_famine_in_Ethiopia) with around 1 Mio. hunger deaths - why?
+  + great famine was not result of shortage, but of inhumane relations
+  + there was food in the country, but when drought came, prices went up and poor peasents were unable to purchase any
+  + government did not intervene / let world intervene, because: prestige, didn't want to admit that there was hunger in the land
 {{< /tab >}}
 {{< /tabs >}}
 
 #+END_EXPORT
 
-And here is anotcher bit of blah with a footnote citation.[fn:1]
+*** Phases after WWII
+**** 1st phase: 50s/60s - rapid decolonization, optimism, euphoria
+- promise and hope, with freedom comes prosperity
+- movement of French colonies \to want to become French citizens
+- movement of British colonies \to *Pan-Africanism*
+  + people: activist [[https://en.wikipedia.org/wiki/Alexander_Crummell][Alexander Crummell]], writer [[https://en.wikipedia.org/wiki/W._E._B._Du_Bois][W. E. B. Du Bois]] (core idea:
+    Black* people should remain in the countries where they now live), journalist
+    [[https://en.wikipedia.org/wiki/Marcus_Garvey][Marcus Garvey]] (core idea: Black* people should return to Africa)
+  + core ideas
+    1. all Blacks* in the world constitute a single race, a single culture, and
+       should be proud of their colour of skin
+    2. all of Africa should be independent and united \to "Africa for Africans"
+- BUT: corrupt elites - why?
+  + no well-developed private sector, plantations belonged to foreigners, banks
+    belong to foreign capital \to political career was only way to richness
+**** 2nd phase: 70s/80s - rapid growth of population, pessimism
+- civil wars, revolts, massacres, hunger
+  + opponents used all means (tribal and ethnic conflicts, military might,
+    corruption, murder)
+  + cold war era → problems + interests of weaker, dependent countries were
+    ignored, subordinate to superpower interests
+- coup d'etat in /Nigeria/ - military seizes power after only 5 years of
+  independence
+  + and people celebrate! Since own elite is seen as too corrupt ("black
+    imperialists", "political wolves, who plunder the country")
 
-
-
-[fn:1]
-
-** Asia
+** TODO Asia
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: docs/notes/international
 :EXPORT_FILE_NAME: asia
 :END:
 
 Another continent to describe.
+
+
+** TODO Philosophy
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index.en.md
+:EXPORT_HUGO_SECTION: docs/notes/philosophy
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookFlatSection true
+:END:
+
+** TODO Philosophy
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/notes/philosophy
+:EXPORT_FILE_NAME: philo.en.md
+:END:
+*** A overview from
+#+BEGIN_EXPORT html
+{{< mermaid >}}
+graph TD
+	A["Christmas und viel mehr text hahaha textext<br/>
+  und noch mehr text"] -->|Get money| B(Go shopping)
+	B --> C{Let me think}
+	C -->|One| D[Laptop]
+	C -->|Two| E[iPhone]
+	C -->|Three| F[fa:fa-car Car]
+
+{{< /mermaid >}}
+#+END_EXPORT
+
+* Notizen
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/notes
+:END:
+** Notizen
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index.de.md
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
+:END:
+
+** TODO Philosopie
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index.de.md
+:EXPORT_HUGO_SECTION: docs/notes/philosophy
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookFlatSection true
+:END:
+
+** TODO Philosopie
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/notes/philosophy
+:EXPORT_FILE_NAME: philo.de.md
+:END:
+*** Ein Überblick aus "Sophies Welt"
+#+BEGIN_EXPORT html
+{{< mermaid >}}
+graph TB
+10(("""mythisches Weltbild<br>
+   = Göttererzählungen"""))
+11["""
+- Präkere <sup>Machtbalance</sup> zw. guten<br>
+  und bösen Kräften<br>
+- Natur = <i>Frøya</i>, wenn geraubt<br>
+  von Trollen keine <sub>Fruchtbarkeit</sub><br>
+- Opfer um <code>Macht</code> der <del>Götter</del> zu<br>
+  vergrößern → f. Odin sogar Menschen<br>
+- Gedicht <i>Trymsveda</i>: Thor's<br>
+  <q>Hammer gestohlen</q> → verkleidet sich als Frau<br>
+  um ihn wiederzubekommen<br>
+"""]
+12["""
+- <big>Niederschrift</big> der <small>Göttermythen</small> dr<br>
+  <b>Homer</b> und <b>Hesiod</b> 9300 HE<br>
+- 1. Mythenkritik: <strong>Xenophanes</strong> 9430 HE<br>
+  ...Götter nach eigenem Vorbild...<br>
+  → Ziel erster Philosophen: natürliche<br>
+  Erklärungen für Naturprozesse<br>
+"""]
+20(("""Naturphilosophen (Vorsokratiker)<br>
+- sahen <u>Veränderungen</u><br>
+- glaubten an Urstoff dahinter<br>
+- erhalten durch Aristoteles<br>
+"""))
+21["""<big>3 aus Milet (griech. Kolonie in Kleinasien)</big>"""]
+21a["""
+- Urstoff = <u>Wasser</u><br>
+- Erde voller <q>Lebenskeime</q>,<br>
+  alles voller Götter<br>
+- 9415 HE Sonnenfinsternis berechnet<br>
+"""]
+21b["""
+- Welt nur eine von vielen<br>
+- entsteht und vergeht in<br>
+  <u>das Unendliche</u>
+"""]
+21c["""
+- 9430 - 9475 HE<br>
+- Urstoff = <u>Luft</u><br>
+- Wasser ist dichte Luft,<br>
+  Feuer ist dünne Luft
+"""]
+22["""<strong>Parmenides</strong> (9460 - 9520 HE)<br>
+- alles, was es gibt, hat schon immer existiert<br>
+- aus nichts kann nichts werden <br>
+- glaubte nicht an Veränderung<br>
+  → <u>Sinnestäuschung</u><br>
+- starker Glaube an menschliche <u>Vernunft</u><br>
+  = <u>Rationalismus</u>
+"""]
+23["""<strong>Heraklit</strong> (9460 - 9520 HE)<br>
+- alles fließt → <u>Sinneserfahrung</u><br>
+- Gut und Böse hat Platz in Ganzheit<br>
+- alle Veränderung und Gegensätze der Natur<br>
+  sind <u>Einheit oder Ganzheit</u><br>
+  = Gott oder <u>Logos</u>
+"""]
+24["""<strong>Anaxagoras</strong> (9500 - 9573 HE)<br>
+- nicht 1 Urstoff, sondern<br>
+  kleinste Teilchen, die<br>
+  <q>etwas von allem</q> in sich<br>
+  tragen = <q>Samen / Keime</q><br>
+- 1 Kraft, die Ordnung schafft<br>
+  = <u>Geist</u><br>
+- Astronom:<br>
+  - Sonne kein Gott, sondern<br>
+    glühende Masse<br>
+  - alle Himmelskörper aus Stoff<br>
+    wie unsere Erde → <u>Leben auf</u><br>
+    <u> anderen Planete</u> mögl<br>
+  - erklärte Entstehung von<br>
+    Sonnenfinsternissen
+"""]
+25["""<strong>Empedokles</strong> (9507 - 9567 HE)<br>
+- Fehler liegt in Annahme<br>
+  <u>1</u> Grundstoffes<br>
+- 4 <u>Wurzeln</u> der Natur<br>
+  = Erde, Luft, Feuer, Wasser<br>
+- 2 <u>Naturkräfte</u>:<br>
+  Liebe und Streit;<br>
+  auflösen und verbinden<br>
+→ Unterscheidet zw <u>Stoff</u><br>
+  und <u>Kraft</u> → moderne<br>
+  Wissenschaft glaubt auch, alles<br>
+  dr Grundstoffe + Naturkräfte<br>
+  erklären zu können
+"""]
+26["""<strong>Demokrit</strong> (9541 - 9631 HE)<br>
+- sichtbare Veränderung heißt<br>
+  nicht, dass sich wirklich<br>
+  etwas veränderte → kleine,<br>
+  unteilbare, unsichtbare,<br>
+  feste/massive, unterschiedlich<br>
+  geformte, ewige, mit <q>Haken u<br>
+  Ösen</q> ausgestattete Bau-<br>
+  steine = <u>Atome</u> → noch heute<br>
+  wird an kleinste Teile geglaubt<br>
+- glaubte nur an Atome = das<br>
+  Materielle + leerer Raum<br>
+  = <u>Materialist</u><br>
+- Empfindungen auch durch Atome<br>
+  (<q>Mondatome treffen mein Auge</q>)<br>
+- Bewusstsein? → Seelenatome<br>
+  → stirbt Mensch, wirbeln<br>
+  Seelenatome davon → keine<br>
+  unsterbliche Seele
+"""]
+27["""
+→ Wie konnte ein Stoff plötzlich zu etwas anderen<br>
+  werden? → <u>Problem der Veränderung</u>
+"""]
+
+30(("""Schicksalsgläubigkeit"""))
+
+40(("""<u>Sophisten</u><br>
+in Athen ab 9550 HE"""))
+
+50(("""Athener Philosophie / Die Sokratiker<br>
+ca 9550 - 9650 HE"""))
+
+60(("""<u>Hellenismus</u><br>
+ca 9650 - 9950 HE"""))
+
+10==>20
+subgraph Göttererzählungen
+10-->|Wikinger|11
+10-->|Griechen|12
+end
+11-.-20
+12-.-20
+20==>30
+subgraph Vorsokratiker
+20-->21
+21-->|<strong>Thales</strong>|21a
+21-->|<strong>Anaximander</strong>|21b
+21-->|<strong>Anaximenes</strong>|21c
+21a-->27
+21b-->27
+21c-->27
+subgraph Problem-der-Veränderung
+27-->|Eleaten-in-Süditalien|22
+27-->|Ephesos-in-Kleinasien|23
+end
+subgraph Lösungen
+22-->|Lösung|24
+22-->|Lösung|25
+23-->|Lösung|25
+22-->|beste Lösung: in Abdera an nördlicher Ägäis|26
+end
+end
+24-.-30
+25-.-30
+26-.-30
+30==>40
+40==>50
+50==>60
+
+{{< /mermaid >}}
+#+END_EXPORT
+
+{
+  "theme": "default",
+  "logLevel": "5",
+  "securityLevel": "loose",
+  "flowchart":{
+      "htmlLabels":true,
+      "curve": "basis",
+      "nodeSpacing": "50",
+      "rankSpacing": 50,
+      "useMaxWidth": true
+    }
+}
 
 
 * Blog Posts
@@ -357,15 +741,25 @@ Another continent to describe.
 ** DONE Test post
    CLOSED: [2020-03-23 Mo 14:31]
 :PROPERTIES:
-:EXPORT_FILE_NAME: test-post
+:EXPORT_FILE_NAME: test-post.en.md
 :END:
 
 Test post text.
 
-** TODO Reading "The Shadow of the Sun" by Ryszard Kapuściński :@books:
+** DONE Test post deutsch
+   CLOSED: [2020-03-23 Mo 14:31]
+:PROPERTIES:
+:EXPORT_FILE_NAME: test-post.de.md
+:END:
+
+Test post text.
+
+** TODO Reading "The Shadow of the Sun" by Ryszard Kapuściński       :@books:
 :PROPERTIES:
 :EXPORT_FILE_NAME: shadow-of-sun
 :END:
+- State "TODO"       from "PENDING"    [2021-01-13 Mi 23:24]
+- State "PENDING"    from "DONE"       [2021-01-13 Mi 23:24]
 General impression: thoughtful book, mostly he tries to avoid [[https://www.youtube.com/watch?v=D9Ihs241zeg][single stories]] and
 gives an impression of different scenes in or between different African
 countries from the end of the 1950s till the 1990s. From time to time he tries
@@ -377,7 +771,6 @@ than to African readers.
 
 In this blog post I will share the more impressionist quotes I liked, while some
 historical takeaways will be collected in [[#africa][Notes]]
-
 **** p 29: Course and temperature of the /first greeting/ defines fate of the relationship
 - from very first second: exhibit enormous primal joy and geniality
 - extend hand in large, vigorous gesture
@@ -415,3 +808,5 @@ historical takeaways will be collected in [[#africa][Notes]]
   "little Europe" or "little America" (ee.g. in luxury hotels), and departed,
   bragging later that they had been to Africa, a place that in reality they had
   never seen.
+**** wonders
+- Lalibela: 11 great churches carved in stone and misery
