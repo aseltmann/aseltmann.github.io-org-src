@@ -1,7 +1,7 @@
 +++
 title = "Test page"
 author = ["Alexander Seltmann"]
-lastmod = 2021-01-17T00:10:37+01:00
+lastmod = 2021-01-18T01:14:19+01:00
 draft = false
 creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
 +++

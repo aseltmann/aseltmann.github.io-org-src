@@ -541,23 +541,344 @@ graph TD
 :EXPORT_HUGO_SECTION: docs/notes
 :END:
 ** Notizen
-:PROPERTIES:
-:EXPORT_FILE_NAME: _index.de.md
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
-:END:
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: _index.de.md
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
+   :END:
+** Gedichte
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: poetry.de.md
+   :END:
+*** Erich Fried
+   #+begin_details
+   #+begin_summary
+   Kleines Beispiel (1982)
+   #+end_summary
+   #+BEGIN_VERSE
+     Auch ungelebtes Leben
+     geht zu Ende
+     zwar vielleicht langsamer
+     wie eine Batterie
+     in einer Taschenlampe
+     die keiner benutzt
+
+     Aber das hilft nicht viel:
+     Wenn man
+     (sagen wir einmal)
+     diese Taschenlampe
+     nach so- und sovielen Jahren
+     anknipsen will
+     kommt kein Atemzug Licht mehr heraus
+     und wenn du sie aufmachst
+     findest du nur deine Knochen
+     und falls du Pech hast
+     auch diese
+     schon ganz zerfressen
+
+     Da hättest du
+     genau so gut
+     leuchten können
+   #+END_VERSE
+   #+end_details
+
+   #+begin_details
+   #+begin_summary
+   Herrschaftsfreiheit (1984)
+   #+end_summary
+   #+BEGIN_VERSE
+     Zu sagen
+     "Hier
+     herrscht Freiheit"
+     ist immer
+     ein Irrtum
+     oder auch
+     eine Lüge:
+
+     Freiheit
+     herrscht nicht
+   #+END_VERSE
+   #+end_details
+
+   #+begin_details
+   #+begin_summary
+   Humorlos (1967)
+   #+end_summary
+   #+BEGIN_VERSE
+     Die Jungen
+     werfen
+     zum Spaß
+     mit Steinen
+     nach Fröschen
+
+     Die Frösche
+     sterben
+     im Ernst
+   #+END_VERSE
+   #+end_details
+
+   #+begin_details
+   #+begin_summary
+   Rückwärtsgewandte Utopie (1981)
+   #+end_summary
+   #+BEGIN_VERSE
+     Angeklagt
+     der Unmenschlichkeit
+     behauptet
+     der Nichtmehrmensch
+     immer noch
+     erst
+     ein Nochnichtmensch
+     zu sein
+   #+END_VERSE
+   #+end_details
+
+   #+begin_details
+   #+begin_summary
+   Zu guter Letzt (1983)
+   #+end_summary
+   #+BEGIN_VERSE
+     Als Kind wusste ich:
+     Jeder Schmetterling
+     den ich rette
+     jede Schnecke
+     und jede Spinne
+     und jede Mücke
+     jeder Ohrwurm
+     und jeder Regenwurm
+     wird kommen und weinen
+     wenn ich begraben werde
+
+     Einmal von mir gerettet
+     muss keines mehr sterben
+     Alle werden sie kommen
+     zu meinem Begräbnis
+
+     Als ich dann groß wurde
+     erkannte ich:
+     Das ist großer Unsinn
+     Keines wird kommen
+     ich überlebe sie alle
+
+     Jetzt im Alter
+     frage ich: Wenn ich sie aber
+     rette bis ganz zuletzt
+     kommen doch vielleicht zwei oder drei?
+   #+END_VERSE
+   #+end_details
+
+*** Lǎozǐ
+    Ich persönlich mag die Übersetzung von Günther Debon.
+   #+begin_details
+   #+begin_summary
+   Dàodéjīng - Kapitel 11
+   #+end_summary
+   #+BEGIN_VERSE
+     [...]
+
+     Man knetet Ton zurecht
+     Zum Trinkgerät:
+     Eben dort, wo keiner ist,
+     Ist des Gerätes Brauchbarkeit.
+
+     [...]
+
+     Wahrlich:
+     Erkennst du das Da-Sein als einen Gewinn,
+     Erkenne: Das Nicht-Sein macht brauchbar.
+   #+END_VERSE
+   #+end_details
+   #+begin_details
+   #+begin_summary
+   Dàodéjīng - Kapitel 15
+   #+end_summary
+   #+BEGIN_VERSE
+     Wer im Altertum gut war als Meister,
+     War subtil, geheimnisvoll, mystisch, durchdringend;
+     So tief, dass er uns unbegreiflich bleibt.
+     Wohl! Und weil er unbegreiflich bleibt,
+     Will ich lieber dartun sein Gebaren:
+
+     So zögernd, ach!
+     Wie wenn man winters quert einen Strom;
+     So ängstlich, ach!
+     Wie wenn man fürchtet die Nachbarn rings;
+     Verhalten, ach!
+     Als wäre zu Gast man geladen;
+     Nachgiebig, ach!
+     Wie vor der Schmelze das Eis;
+     Gediegen, ach!
+     Gleich einem Grobholz;
+     Weit, ach!
+     Gleich einem Flusstal;
+     Chaotisch, ach!
+     Gleich einem Strudel.
+
+     Wer kann den Strudel stillen,
+     Auf dass er mählich werde rein?
+     Wer kann das Ruhende bewegen,
+     Auf dass es mählich Leben gewinne?
+
+     Wer diesen <i>Weg</i> bewahrt,
+     Wünscht nicht, erfüllt zu sein.
+     Wohl! Nur was unerfüllt,
+     Kann auch verschleißen ohne Erneuen.
+   #+END_VERSE
+   #+end_details
+   #+begin_details
+   #+begin_summary
+   Dàodéjīng - Kapitel 20
+   #+end_summary
+   #+BEGIN_VERSE
+     Brich ab das Lernen, so bist du sorgenfrei!
+
+     Sind denn "Jawohl!" und "Recht gern!"
+     Wirklich einander so fern?
+     Sind denn das Gute, die Schlechtigkeit
+     Wirklich einander so weit?
+     "Wem andere Menschen sich beugen,
+     Dem musst auch du dich beugen":
+     Welch Öde doch! Und kein Ende noch!
+
+     Die Menschen alle sind ausgelassen,
+     Als säßen sie zechend beim Opferfest,
+     Als stiegen sie auf zu den Frühlingsterrassen.
+     Ich allein liege noch still,
+     Kein Zeichen hab ich gegeben,
+     Gleich einem kleinen Kinde,
+     Das noch nie gelacht hat im Leben;
+     Bin schwankend, bin wankend,
+     Als hätt ich die Heimat verloren.
+     Die Menge der Menschen hat Überfluss;
+     Nur Ich bin gleichsam von allem entblößt.
+     Wahrlich, Ich habe das Herz eines Toren,
+     So dunkel und wirr!
+     Die gewöhnlichen Menschen sind hell und klar;
+     Nur Ich bin trübe verhangen.
+     Die gewöhnlichen Menschen sind strebig-straff;
+     Nur Ich bin bang-befangen.
+     Ruhelos gleich ich dem Meere;
+     Verweht, ach, bin gleichsam ich ohne Halt.
+
+     Die Menschen machen sich nützlich all,
+     Nur Ich bin halsstarr, als ob ich ein Wildling wäre.
+     Nur Ich bin von den andern Menschen verschieden -
+     Der ich die nährende Mutter verehre.
+   #+END_VERSE
+   #+end_details
+
+
+** Poetry
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: poetry.en.md
+   :END:
+*** Lǎozǐ
+    I am partial to the [[https://terebess.hu/english/tao/DerekLin.html#Kap20][translation of Derek Lin]]
+   #+begin_details
+   #+begin_summary
+   Dàodéjīng - Chapter 11 (The use of what has no substantive existence)
+   #+end_summary
+   #+BEGIN_VERSE
+     [...]
+
+     Mix clay
+     to create a container
+     In its emptiness, there is
+     the function of a container
+
+     [...]
+     Therefore,
+     that which exists is used to create benefit
+     That which is empty is used to create functionality
+   #+END_VERSE
+   #+end_details
+   #+begin_details
+   #+begin_summary
+   Dàodéjīng - Chapter 15 (The exhibition of the qualities of the Dao)
+   #+end_summary
+   #+BEGIN_VERSE
+     The Tao masters of antiquity
+     Subtle wonders through mystery
+     Depths that cannot be discerned
+     Because one cannot discern them
+     Therefore one is forced to describe the appearance
+
+     Hesitant,
+     like crossing a wintry river
+     Cautious,
+     like fearing four neighbors
+     Solemn,
+     like a guest
+     Loose,
+     like ice about to melt
+     Genuine,
+     like plain wood
+     Open,
+     like a valley
+     Opaque,
+     like muddy water
+
+     Who can be muddled yet desist
+     In stillness gradually become clear?
+     Who can be serene yet persist
+     In motion gradually come alive?
+
+     One who holds this <i>Tao</i> does not wish to be overfilled
+     Because one is not overfilled
+     Therefore one can preserve and not create anew
+   #+END_VERSE
+   #+end_details
+   #+begin_details
+   #+begin_summary
+   Dàodéjīng - Chapter 20 (Being different from ordinary people)
+   #+end_summary
+   #+BEGIN_VERSE
+     Cease learning, no more worries
+
+     Respectful response and scornful response
+     How much is the difference?
+     Goodness and evil
+     How much do they differ?
+     What the people fear,
+     I cannot be unafraid
+     So desolate! How limitless it is!
+
+     The people are excited
+     As if enjoying a great feast
+     As if climbing up to the terrace in spring
+     I alone am quiet and uninvolved
+     Like an infant
+     not yet smiling
+     So weary,
+     like having no place to return
+     The people all have surplus
+     While I alone seem lacking
+     I have the heart of a fool indeed -
+     so ignorant!
+     Ordinary people are bright
+     I alone am muddled
+     Ordinary people are scrutinizing
+     I alone am obtuse
+     So tranquil, like the ocean
+     So moving, as if without limits
+
+     The people all have goals
+     And I alone am stubborn and lowly
+     I alone am different from them
+     And value the nourishing mother
+   #+END_VERSE
+   #+end_details
+** TODO Philosopie
+   :PROPERTIES:
+   :EXPORT_FILE_NAME: _index.de.md
+   :EXPORT_HUGO_SECTION: docs/notes/philosophy
+   :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookFlatSection true
+   :END:
 
 ** TODO Philosopie
-:PROPERTIES:
-:EXPORT_FILE_NAME: _index.de.md
-:EXPORT_HUGO_SECTION: docs/notes/philosophy
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookFlatSection true
-:END:
-
-** TODO Philosopie
-:PROPERTIES:
-:EXPORT_HUGO_SECTION: docs/notes/philosophy
-:EXPORT_FILE_NAME: philo.de.md
-:END:
+   :PROPERTIES:
+   :EXPORT_HUGO_SECTION: docs/notes/philosophy
+   :EXPORT_FILE_NAME: philo.de.md
+   :END:
 *** Ein Überblick aus "Sophies Welt"
 #+BEGIN_EXPORT html
 {{< mermaid >}}
