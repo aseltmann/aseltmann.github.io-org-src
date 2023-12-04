@@ -1,5 +1,5 @@
 #+title: @lexseltmann
-#+author: Alexander Seltmann
+#+author: Alex Seltmann
 #+hugo_base_dir: .
 #+options: creator:t
 #+hugo_auto_set_lastmod: t
@@ -17,71 +17,36 @@
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :link-citations true
 :END:
 
-#+BEGIN_EXPORT html
-{{< hint danger >}}
-**SITE UNDER CONSTRUCTION**
-Please return later for more up-to-date information.
-{{< /hint >}}
-#+END_EXPORT
 ** Hi, I'm Alex
 
-... and this website is my project showcase, a collection of thoughts in a
-structured manner, and maybe even a weblog.
-
-** Whoami?
-
-I am a medical student, currently doing a  [[https://en.wikipedia.org/wiki/Doctor_of_Medicine#Germany][Medical Doctorate]] in the [[http://www.biophysical-imaging.com][Biophysical
-Imaging Lab]] of Christian Eggeling in Jena. I enjoy making music and climbing
-rocks.
+I am a researcher and physician, currently working with Marie von
+Lilienfeld-Toal at the [[https://news.rub.de/leute/2023-07-07-medizin-willst-du-mich-behandeln-musst-du-wissen-wer-ich-bin][Institute for Diversity Medicine]] at Ruhr University
+Bochum, formerly at the [[http://www.biophysical-imaging.com][Biophysical Imaging Lab]] of Christian Eggeling in Jena.
 
 ** Contact
 
-You can get in contact with me by sending an email to =seltmann (at) posteo
-(dot) de=. You
-can also find me on [[https://twitter.com/aseltmannio][Twitter]], [[https://github.com/aseltmann][Github]].
-** Latest Tweets
-#+BEGIN_EXPORT html
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: scroll;">
-<a class="twitter-timeline" data-dnt="true" data-theme="light" href="https://twitter.com/aseltmannio?ref_src=twsrc%5Etfw">Tweets by aseltmannio</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-#+END_EXPORT
+You can get in contact with me by sending an email to =alexander.seltmann (at) rub
+(dot) de=. You can also find me on [[https://github.com/aseltmann][Github]].
 
-* Homepage
+I prefer to be addressed with neutral or no pronouns (Dear Alex | Dear Alex
+Seltmann).
+
+* Homepage_de
 :PROPERTIES:
 :EXPORT_HUGO_SECTION:
 :EXPORT_FILE_NAME: _index.de.md
 :END:
 
-#+BEGIN_EXPORT html
-{{< hint danger >}}
-**SITE UNDER CONSTRUCTION**
-Please return later for more up-to-date information.
-{{< /hint >}}
-#+END_EXPORT
-
 ** Hallo, ich bin Alex
 
-... und diese Website gibt einen Überblick über meine Projekte, eine Sammlung an
-Notizen und einen Weblog. Die Inhalte dieser Seite werden vor allem in
-Englischer Sprache verfasst sein, insbesondere wenn sie Verbindungen zu meiner
-Forschung haben.
-
-** Whoami?
-
-Ich bin Medizinstudent, arbeite an einer medizinischen Doktorarbeit in der
-[[http://www.biophysical-imaging.com][Biophysical Imaging Gruppe]] von Christian Eggeling in Jena.
+Ich bin Forschende:r und Mediziner:in, aktuell tätig bei Marie von
+Lilienfeld-Toal am [[https://news.rub.de/leute/2023-07-07-medizin-willst-du-mich-behandeln-musst-du-wissen-wer-ich-bin][Institut für Diversitätsmedizin]] der Ruhr-Universität Bochum,
+davor in der [[http://www.biophysical-imaging.com][Biophysical Imaging Gruppe]] von Christian Eggeling in Jena.
 
 ** Kontakt
-Ich bin per Email erreichbar unter =seltmann (at) posteo
-(dot) de=. Weiterhin bin ich zu finden auf [[https://twitter.com/aseltmannio][Twitter]] und [[https://github.com/aseltmann][Github]].
-** Neueste Tweets
-#+BEGIN_EXPORT html
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: scroll;">
-<a class="twitter-timeline" data-dnt="true" data-theme="light" href="https://twitter.com/aseltmannio?ref_src=twsrc%5Etfw">Tweets by aseltmannio</a>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-#+END_EXPORT
+Ich bin per Email erreichbar unter =alexander.seltmann (at) rub
+(dot) de=. Weiterhin bin ich zu finden auf [[https://github.com/aseltmann][Github]].
+
 * Projects
 :PROPERTIES:
 :EXPORT_HUGO_SECTION: docs/projects
@@ -156,7 +121,7 @@ Ich bin per Email erreichbar unter =seltmann (at) posteo
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
 :END:
 
-** Test page
+** TODO Test page
   :PROPERTIES:
   :EXPORT_HUGO_SECTION: docs/notes/test
   :EXPORT_FILE_NAME: test-page
@@ -1066,7 +1031,87 @@ Test post text.
 :END:
 
 Test post text.
+** TODO Connection on Mount Misery vs Corona
+:PROPERTIES:
+:EXPORT_FILE_NAME: mount-misery-corona.en.md
+:END:
 
+Eine Grundüberlegung bei Noah Sham's Mount Misery: It is not self that heals,
+but connection.
+
+Corona: Connection (soziale Nähe) tötet.
+
+** TODO Verbindung in Mount Misery vs Corona
+
+:PROPERTIES:
+:EXPORT_FILE_NAME: mount-misery-corona.de.md
+:END:
+
+Siehe Englische Version.
+
+** TODO Thoughts on Thea Dorn about consolation in pandemic times
+
+:PROPERTIES:
+:EXPORT_FILE_NAME: thea-dorn-trost.en.md
+:END:
+
+See German version.
+
+** TODO Gedanken zu Thea Dorn über Trost und Religiösität in Zeiten der Pandemie
+
+:PROPERTIES:
+:EXPORT_FILE_NAME: thea-dorn-trost.de.md
+:END:
+
+In einer kürzlich erschienenen Folge des ZEIT-Podcasts "Alles gesagt" besprechen
+Thea Dorn, Jochen Wegner, und Christian Amend das Buch /Trost. Briefe an Max./.
+Sie nähern sich einem Kernproblem des modernen Menschen: wir seien darauf aus,
+entweder vor einem unerwünschten Ereignis Risiken zu minimieren, oder nachher
+Schadenersatz und Verantwortung zu fordern. Wir hätten verlernt, mit den
+Unwägbarkeiten des Lebens umzugehen. Religiösität mit ihrer trostspendenen
+Wirkung sei der entscheidende Ausweg.
+
+Punkte, die ich ansprechen möchte:
+- Thea Dorn zitiert NIetzsche platt als "Gott ist tot, der Mensch ist Gott, etc"
+  → eingehen auf Nietzsche's "Gott ist tot" als Aufruf an Mensch in der
+  "aufgeklärten" Welt, dass es eine neue Begründung für basale Dinge wie
+  Menschenrechte, oder auch Trost, braucht. Glauben als mentaler Trick. "Gott
+  ist tot" als Aufruf und mit Hoffnung besetzt, eine nachhaltigere, tiefere
+  Basis zu finden.
+- Sie geht zurück zur Religiösität. Ich als ostdeutsch sozialisiert kann nicht
+  zurückgehen.
+  Ich wurde als Kind nicht an Glauben herangeführt, es bleibt für mich ein
+  unzugängliches Thema, welches nicht als ehrlich und wahren Trost annehmen
+  kann. Ich weiß unverrückbar, dass das Leben ein kurzer, zufälliger Moment ist,
+  dass nach dem Tod nichts ist, dass das Leben am Ende keinen höheren Sinn hat.
+  Dies ist mein Ausgangspunkt. Ist dies der Grund, warum ich bei diesen
+  Überlegungen keine Hoffnungslosigkeit spüre? Ich muss nicht dabei verweilen,
+  ich kann einen Schritt weitergehen: letztendlich zählt das, was ich in meinem
+  jetzigen Leben tue.
+- Dass es Leben gibt, ist chemischer Zufall, dass es menschliches Leben gibt,
+  ist evolutionärer Zufall, dass ich in einem reichen Land geboren werde, ist
+  geschichtlicher Zufall, dass meine Eltern mich gut versorgen und großziehen
+  können, ist familiärer Zufall. Brauchen wir eine Zufallsethik? Wenn so viele
+  Teile unserer Existenz Zufall sind, ist das genug, um Trost zu spenden?
+- Trifft das Unheil ein, ist dies ein Schicksalsschlag, aber nicht auch eine
+  statistische Größe? Das Medizinstudium zeigt mir: die ganze Zeit erkranken
+  Menschen, während ich oft glimpflich davonkomme. Ich bin nicht mit 18J in
+  einen tödlichen Verkehrsunfall verwickelt worden. Ich bin nicht mit 23J an
+  akuter Leukämie gestorben. Sehe ich diese statistischen Bedrohungen die ganze
+  Zeit als reale Bedrohungen, werde ich gewiss verrückt, verzweifeln,
+  hoffnungslos.
+- Ich bin es jedoch nicht. Warum nicht? Gewiss aufgrund einer gewissen stoischen
+  Haltung. Das reicht aber nicht, es braucht auch einen aktiven Part -
+  Risikominimierung bietet letztlich dieses Gewissen: "ich habe mein möglichstes
+  getan". Christian Drosten hatte eine ähnliche Losung: wir müssen besorgt sein
+  und Maßnahmen treffen - aber nicht panisch.
+
+Weiteres Thema: Thea Dorn sagt, Naturwissenschaftler*innen wägen gegeneinander
+ab: wir rechnen aus, was wieviel Leid bringt, dann nehmen wir das, was weniger
+bringt. Das sei Utilitarismus.  Sie jedoch sagt: wir müssen abwägen von Leben
+retten vs "Freiheit".
+
+- mit Friederike Schmitz: Abwägen im juristischen Sinne IST Utilitarismus!
 ** TODO Reading "The Shadow of the Sun" by Ryszard Kapuściński       :@books:
 :PROPERTIES:
 :EXPORT_FILE_NAME: shadow-of-sun
@@ -1118,7 +1163,7 @@ historical takeaways will be collected in [[#africa][Notes]]
   + Mothers in Tanganyika to their children: "You had better be good, or else
     the /mzungu/ (Swahili: the white man, the European) will eat you!"
 - p110: So often I had felt irritated with people who arrived here, lived in
-  "little Europe" or "little America" (ee.g. in luxury hotels), and departed,
+  "little Europe" or "little America" (e.g. in luxury hotels), and departed,
   bragging later that they had been to Africa, a place that in reality they had
   never seen.
 **** wonders

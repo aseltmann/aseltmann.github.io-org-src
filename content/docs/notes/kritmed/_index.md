@@ -1,8 +1,8 @@
 +++
 title = "Science & Medicine"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T01:14:19+01:00
+author = ["Alex Seltmann"]
+lastmod = 2023-12-05T00:21:25+01:00
 draft = true
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 bookFlatSection = true
 +++

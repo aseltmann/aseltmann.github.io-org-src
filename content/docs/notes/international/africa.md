@@ -1,9 +1,9 @@
 +++
 title = "Africa"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T01:14:20+01:00
+author = ["Alex Seltmann"]
+lastmod = 2023-12-05T00:21:26+01:00
 draft = true
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 +++
 
 ## Notes on specific countries {#notes-on-specific-countries}
@@ -75,9 +75,9 @@ creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
 -   promise and hope, with freedom comes prosperity
 -   movement of French colonies &rarr; want to become French citizens
 -   movement of British colonies &rarr; **Pan-Africanism**
-    -   people: activist [Alexander Crummell](https://en.wikipedia.org/wiki/Alexander%5FCrummell), writer [W. E. B. Du Bois](https://en.wikipedia.org/wiki/W.%5FE.%5FB.%5FDu%5FBois) (core idea:
+    -   people: activist [Alexander Crummell](https://en.wikipedia.org/wiki/Alexander_Crummell), writer [W. E. B. Du Bois](https://en.wikipedia.org/wiki/W._E._B._Du_Bois) (core idea:
         Black\* people should remain in the countries where they now live), journalist
-        [Marcus Garvey](https://en.wikipedia.org/wiki/Marcus%5FGarvey) (core idea: Black\* people should return to Africa)
+        [Marcus Garvey](https://en.wikipedia.org/wiki/Marcus_Garvey) (core idea: Black\* people should return to Africa)
     -   core ideas
         1.  all Blacks\* in the world constitute a single race, a single culture, and
             should be proud of their colour of skin

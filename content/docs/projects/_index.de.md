@@ -1,9 +1,9 @@
 +++
 title = "Projekte"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T01:14:19+01:00
+author = ["Alex Seltmann"]
+lastmod = 2023-12-05T00:21:24+01:00
 draft = false
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 bookCollapseSection = false
 +++
 
@@ -13,7 +13,7 @@ Ich glaube an die Prinzipien von Open Science, Open Data und Open Source.
 Daher arbeite ich aktuell daran, meine Forschung an
 Fluoreszenzkorrelationsspektroskopie (FCS) und Maschinellem Lernen in einer
 offenen Art und Weise verfügbar zu machen. Im Sinne der [Open-notebook
-science](https://en.wikipedia.org/wiki/Open-notebook%5Fscience) ist hier ein Einblick in meine aktuelle Forschung zu finden:
+science](https://en.wikipedia.org/wiki/Open-notebook_science) ist hier ein Einblick in meine aktuelle Forschung zu finden:
 
 <a href="https://aseltmann.github.io/fluotracify/">Fluotracify - eine reproduzierbare Doktorarbeit [Englisch]</a>
 

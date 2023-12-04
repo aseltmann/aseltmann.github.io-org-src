@@ -1,9 +1,9 @@
 +++
 title = "Test page"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T01:14:19+01:00
-draft = false
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+author = ["Alex Seltmann"]
+lastmod = 2023-12-05T00:21:25+01:00
+draft = true
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 +++
 
 ## Year numbering system {#year-numbering-system}
@@ -14,12 +14,12 @@ creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
 
 Examples:
 
-| Human Era year | Common Era year | Event                                                                    |
-|---------------:|----------------:|--------------------------------------------------------------------------|
-| 1001 HE        | 9000 BCE        | [Jericho](https://en.wikipedia.org/wiki/Jericho)                         |
-| 7301 HE        | 2700 BCE        | [First pyramid](https://en.wikipedia.org/wiki/Pyramid%5Fof%5FDjoser)     |
-| 11460 HE       | 1460 CE         | [Machu Picchu built](https://en.wikipedia.org/wiki/Machu%5FPicchu)       |
-| 11945 HE       | 1945 CE         | [United Nations founded](https://en.wikipedia.org/wiki/United%5FNations) |
+| Human Era year | Common Era year | Event                                                                  |
+|---------------:|----------------:|------------------------------------------------------------------------|
+| 1001 HE        | 9000 BCE        | [Jericho](https://en.wikipedia.org/wiki/Jericho)                       |
+| 7301 HE        | 2700 BCE        | [First pyramid](https://en.wikipedia.org/wiki/Pyramid_of_Djoser)       |
+| 11460 HE       | 1460 CE         | [Machu Picchu built](https://en.wikipedia.org/wiki/Machu_Picchu)       |
+| 11945 HE       | 1945 CE         | [United Nations founded](https://en.wikipedia.org/wiki/United_Nations) |
 
 Wonderful illustration of the case for the Human Era (courtesy of
 [kurzgesagt.org](<https://kurzgesagt.org>)):
@@ -77,18 +77,18 @@ Miseratus fonte Ditis conubia.
 {{< /details >}}
 
 <details>
-<p class="details">Here are the _details_.
-</p>
+<div class="details">
+
+Here are the _details_.
+</div>
 </details>
 
 <details open>
-<summary>
-Some **Summary**
-</summary>
-<p class="details">
+<summary>Some <b>Summary</b></summary>
+<div class="details">
 
 Here are the _details_.
-</p>
+</div>
 </details>
 
 
@@ -135,8 +135,8 @@ C = W\log\_{2} (1+\mathrm{SNR})
 \end{equation}
 
 x = \begin{cases}
-   a &\text{if } b <br />
-   c &\text{if } d
+   a &amp;\text{if } b <br />
+   c &amp;\text{if } d
 \end{cases}
 
 

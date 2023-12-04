@@ -1,9 +1,9 @@
 +++
 title = "Projects"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T01:14:18+01:00
+author = ["Alex Seltmann"]
+lastmod = 2023-12-05T00:21:23+01:00
 draft = false
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 bookCollapseSection = false
 +++
 
@@ -15,7 +15,7 @@ research on simulation of Fluorescence Correlation Spectroscopy (FCS)
 measurements and correcting artifacts using neural networks, such as
 Convolutional Neural Nets (CNNs). I do not have my workflow fixed yet, but
 to have an insight in my current approach - and with the principles of
-[Open-notebook science](https://en.wikipedia.org/wiki/Open-notebook%5Fscience) in mind:
+[Open-notebook science](https://en.wikipedia.org/wiki/Open-notebook_science) in mind:
 
 <a href="https://aseltmann.github.io/fluotracify/">Fluotracify - doctoral research project done in a reproducible way</a>
 
