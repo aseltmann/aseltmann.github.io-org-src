@@ -1,8 +1,8 @@
 +++
-title = "Philosopie"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T22:17:40+01:00
+title = "Sektion Philosopie"
+author = ["Alex Seltmann"]
+lastmod = 2023-12-10T02:43:15+01:00
 draft = true
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 bookFlatSection = true
 +++

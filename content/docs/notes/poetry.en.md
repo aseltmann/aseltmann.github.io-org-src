@@ -1,9 +1,9 @@
 +++
 title = "Poetry"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T22:17:40+01:00
+author = ["Alex Seltmann"]
+lastmod = 2023-12-10T02:43:14+01:00
 draft = false
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 +++
 
 ## Lǎozǐ {#lǎozǐ}
@@ -11,12 +11,11 @@ creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
 I am partial to the [translation of Derek Lin](https://terebess.hu/english/tao/DerekLin.html#Kap20)
 
 <details>
-<summary>
-Dàodéjīng - Chapter 11 (The use of what has no substantive existence)
-</summary>
-<p class="details">
+<summary>Dàodéjīng - Chapter 11 (The use of what has no substantive existence)</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 [...]<br />
 <br />
 Mix clay<br />
@@ -28,17 +27,17 @@ the function of a container<br />
 Therefore,<br />
 that which exists is used to create benefit<br />
 That which is empty is used to create functionality<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 <details>
-<summary>
-Dàodéjīng - Chapter 15 (The exhibition of the qualities of the Dao)
-</summary>
-<p class="details">
+<summary>Dàodéjīng - Chapter 15 (The exhibition of the qualities of the Dao)</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 The Tao masters of antiquity<br />
 Subtle wonders through mystery<br />
 Depths that cannot be discerned<br />
@@ -65,20 +64,20 @@ In stillness gradually become clear?<br />
 Who can be serene yet persist<br />
 In motion gradually come alive?<br />
 <br />
-One who holds this <i>Tao</i> does not wish to be overfilled<br />
+One who holds this &lt;i&gt;Tao&lt;/i&gt; does not wish to be overfilled<br />
 Because one is not overfilled<br />
 Therefore one can preserve and not create anew<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 <details>
-<summary>
-Dàodéjīng - Chapter 20 (Being different from ordinary people)
-</summary>
-<p class="details">
+<summary>Dàodéjīng - Chapter 20 (Being different from ordinary people)</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 Cease learning, no more worries<br />
 <br />
 Respectful response and scornful response<br />
@@ -112,6 +111,7 @@ The people all have goals<br />
 And I alone am stubborn and lowly<br />
 I alone am different from them<br />
 And value the nourishing mother<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>

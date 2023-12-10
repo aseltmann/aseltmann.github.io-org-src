@@ -1,20 +1,19 @@
 +++
 title = "Gedichte"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T22:17:40+01:00
+author = ["Alex Seltmann"]
+lastmod = 2023-12-10T02:43:14+01:00
 draft = false
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 +++
 
 ## Erich Fried {#erich-fried}
 
 <details>
-<summary>
-Kleines Beispiel (1982)
-</summary>
-<p class="details">
+<summary>Kleines Beispiel (1982)</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 Auch ungelebtes Leben<br />
 geht zu Ende<br />
 zwar vielleicht langsamer<br />
@@ -38,17 +37,17 @@ schon ganz zerfressen<br />
 Da hättest du<br />
 genau so gut<br />
 leuchten können<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 <details>
-<summary>
-Herrschaftsfreiheit (1984)
-</summary>
-<p class="details">
+<summary>Herrschaftsfreiheit (1984)</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 Zu sagen<br />
 "Hier<br />
 herrscht Freiheit"<br />
@@ -59,17 +58,17 @@ eine Lüge:<br />
 <br />
 Freiheit<br />
 herrscht nicht<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 <details>
-<summary>
-Humorlos (1967)
-</summary>
-<p class="details">
+<summary>Humorlos (1967)</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 Die Jungen<br />
 werfen<br />
 zum Spaß<br />
@@ -79,17 +78,17 @@ nach Fröschen<br />
 Die Frösche<br />
 sterben<br />
 im Ernst<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 <details>
-<summary>
-Rückwärtsgewandte Utopie (1981)
-</summary>
-<p class="details">
+<summary>Rückwärtsgewandte Utopie (1981)</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 Angeklagt<br />
 der Unmenschlichkeit<br />
 behauptet<br />
@@ -98,17 +97,17 @@ immer noch<br />
 erst<br />
 ein Nochnichtmensch<br />
 zu sein<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 <details>
-<summary>
-Zu guter Letzt (1983)
-</summary>
-<p class="details">
+<summary>Zu guter Letzt (1983)</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 Als Kind wusste ich:<br />
 Jeder Schmetterling<br />
 den ich rette<br />
@@ -135,8 +134,9 @@ Jetzt im Alter<br />
 frage ich: Wenn ich sie aber<br />
 rette bis ganz zuletzt<br />
 kommen doch vielleicht zwei oder drei?<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 
@@ -145,12 +145,11 @@ kommen doch vielleicht zwei oder drei?<br />
 Ich persönlich mag die Übersetzung von Günther Debon.
 
 <details>
-<summary>
-Dàodéjīng - Kapitel 11
-</summary>
-<p class="details">
+<summary>Dàodéjīng - Kapitel 11</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 [...]<br />
 <br />
 Man knetet Ton zurecht<br />
@@ -163,17 +162,17 @@ Ist des Gerätes Brauchbarkeit.<br />
 Wahrlich:<br />
 Erkennst du das Da-Sein als einen Gewinn,<br />
 Erkenne: Das Nicht-Sein macht brauchbar.<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 <details>
-<summary>
-Dàodéjīng - Kapitel 15
-</summary>
-<p class="details">
+<summary>Dàodéjīng - Kapitel 15</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 Wer im Altertum gut war als Meister,<br />
 War subtil, geheimnisvoll, mystisch, durchdringend;<br />
 So tief, dass er uns unbegreiflich bleibt.<br />
@@ -200,21 +199,21 @@ Auf dass er mählich werde rein?<br />
 Wer kann das Ruhende bewegen,<br />
 Auf dass es mählich Leben gewinne?<br />
 <br />
-Wer diesen <i>Weg</i> bewahrt,<br />
+Wer diesen &lt;i&gt;Weg&lt;/i&gt; bewahrt,<br />
 Wünscht nicht, erfüllt zu sein.<br />
 Wohl! Nur was unerfüllt,<br />
 Kann auch verschleißen ohne Erneuen.<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
 
 <details>
-<summary>
-Dàodéjīng - Kapitel 20
-</summary>
-<p class="details">
+<summary>Dàodéjīng - Kapitel 20</summary>
+<div class="details">
 
-<p class="verse">
+<div class="verse">
+
 Brich ab das Lernen, so bist du sorgenfrei!<br />
 <br />
 Sind denn "Jawohl!" und "Recht gern!"<br />
@@ -249,6 +248,7 @@ Die Menschen machen sich nützlich all,<br />
 Nur Ich bin halsstarr, als ob ich ein Wildling wäre.<br />
 Nur Ich bin von den andern Menschen verschieden -<br />
 Der ich die nährende Mutter verehre.<br />
-</p>
-</p>
+
+</div>
+</div>
 </details>
