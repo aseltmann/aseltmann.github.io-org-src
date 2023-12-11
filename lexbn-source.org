@@ -1034,7 +1034,7 @@ Test post text.
 CLOSED: [2023-12-10 So 03:05]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day01.en.md
-:header-args:jupyter-python: :session /jpy:localhost#8888:a37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both
+:header-args:jupyter-python: :session /jpy:localhost#8888:a37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both +n
 :ID:       050c869e-41c1-4428-85ef-dcd83cf0b8d7
 :END:
 
@@ -1206,15 +1206,25 @@ more digits), otherwise digits might double. Afterwards, just replace the
 spelled out digits with their numerical value.
 
 #+begin_src jupyter-python
-  for i, r in enumerate(txt.loc[:, 'code']):
-      matches = re.findall(
-          r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', r)
-      result = ''.join([match for match in matches])
-      result = result.replace('one', '1').replace('two', '2').replace(
-          'three', '3').replace('four', '4').replace('five', '5').replace(
-          'six', '6').replace('seven', '7').replace('eight', '8').replace(
-          'nine', '9')
-      txt.loc[i, 'digits2'] = result
+  # for i, r in enumerate(txt.loc[:, 'code']):
+  #     matches = re.findall(
+  #         r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', r)
+  #     result = ''.join([match for match in matches])
+  #     result = result.replace('one', '1').replace('two', '2').replace(
+  #         'three', '3').replace('four', '4').replace('five', '5').replace(
+  #         'six', '6').replace('seven', '7').replace('eight', '8').replace(
+  #         'nine', '9')
+  #     txt.loc[i, 'digits2'] = result
+  # txt
+
+  # a very nice alternative suggested by Tomalak:
+  digits = '\d one two three four five six seven eight nine'.split()
+
+
+  txt['digits2'] = txt.loc[:, 'code'].apply(lambda v: ''.join(
+      str(digits.index(m)) if m in digits else m
+      for m in re.findall(rf'(?=({"|".join(digits)}))', v)
+  ))
   txt
 #+end_src
 
@@ -1245,18 +1255,18 @@ Now, construct the calibration value as before...
 
 #+RESULTS:
 #+begin_example
-                              code digits  calibration   digits2  calibration2
-0                   jjfvnnlfivejj1      1           11        51            51
-1                        6fourfour      6           66       644            64
-2                    ninevbmltwo69     69           69     92699            99
-3         pcg91vqrfpxxzzzoneightzt     91           91     91118            98
-4    jpprthxgjfive3one1qckhrptpqdc     31           31      5311            51
-..                             ...    ...          ...       ...           ...
-995       583sevenhjxlqzjgbzxhkcl5   5835           55  58383375            55
-996                            81s     81           81       811            81
-997        2four3threesxxvlfqfive4    234           24    243354            24
-998        nine6eightsevenzx9twoxc     69           69    968792            92
-999    hmbfjdfnp989mfivefiverpzrjs    989           99  98989955            95
+                              code digits  calibration digits2  calibration2
+0                   jjfvnnlfivejj1      1           11      51            51
+1                        6fourfour      6           66     644            64
+2                    ninevbmltwo69     69           69    9269            99
+3         pcg91vqrfpxxzzzoneightzt     91           91    9118            98
+4    jpprthxgjfive3one1qckhrptpqdc     31           31    5311            51
+..                             ...    ...          ...     ...           ...
+995       583sevenhjxlqzjgbzxhkcl5   5835           55   58375            55
+996                            81s     81           81      81            81
+997        2four3threesxxvlfqfive4    234           24  243354            24
+998        nine6eightsevenzx9twoxc     69           69  968792            92
+999    hmbfjdfnp989mfivefiverpzrjs    989           99   98955            95
 
 [1000 rows x 5 columns]
 #+end_example
@@ -1283,7 +1293,7 @@ Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 CLOSED: [2023-12-11 Mo 23:38]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day02.en.md
-:header-args:jupyter-python: :session /jpy:localhost#8888:b37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both
+:header-args:jupyter-python: :session /jpy:localhost#8888:b37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both +n
 :END:
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
