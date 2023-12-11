@@ -1,10 +1,12 @@
 +++
-title = "Reading \"The Shadow of the Sun\" by Ryszard Kapuściński"
-author = ["Alexander Seltmann"]
-lastmod = 2021-01-18T22:17:41+01:00
+title = """
+  Reading "The Shadow of the Sun" by Ryszard Kapuściński
+  """
+author = ["Alex Seltmann"]
+lastmod = 2023-12-11T23:42:11+01:00
 categories = ["books"]
 draft = true
-creator = "Emacs 27.1 (Org mode 9.4.4 + ox-hugo)"
+creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 +++
 
 -   State "TODO"       from "PENDING"    <span class="timestamp-wrapper"><span class="timestamp">[2021-01-13 Mi 23:24]</span></span>
@@ -48,10 +50,10 @@ historical takeaways will be collected in [Notes]({{< relref "africa" >}})
     -   Were bases for sailors, merchants, and robbers (especially Europeans)
     -   For unstable African boats hard to reach &rarr; spot for concentration camps
         for slave trade
--   p83: The philosophy that inspired the construction of [Kolyma](https://en.wikipedia.org/wiki/Kolyma%5FTales) and [Auschwitz](https://en.wikipedia.org/wiki/Auschwitz%5Fconcentration%5Fcamp),
+-   p83: The philosophy that inspired the construction of [Kolyma](https://en.wikipedia.org/wiki/Kolyma_Tales) and [Auschwitz](https://en.wikipedia.org/wiki/Auschwitz_concentration_camp),
     one of obsessive content and hatred, vileness and brutality, was formulated
     and set down centuries earlier by the captains of the _Martha_ and the _Progress_,
-    the [Marie Ann](https://en.wikipedia.org/wiki/Mary%5FAnn%5F(1772%5Fship)) and the _Rainbow_
+    the [Marie Ann](https://en.wikipedia.org/wiki/Mary_Ann_(1772_ship)) and the _Rainbow_
 
 
 ## p60: Secrets of Serengeti {#p60-secrets-of-serengeti}
@@ -67,7 +69,7 @@ historical takeaways will be collected in [Notes]({{< relref "africa" >}})
     -   Mothers in Tanganyika to their children: "You had better be good, or else
         the _mzungu_ (Swahili: the white man, the European) will eat you!"
 -   p110: So often I had felt irritated with people who arrived here, lived in
-    "little Europe" or "little America" (ee.g. in luxury hotels), and departed,
+    "little Europe" or "little America" (e.g. in luxury hotels), and departed,
     bragging later that they had been to Africa, a place that in reality they had
     never seen.
 
