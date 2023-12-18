@@ -1798,7 +1798,8 @@ Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 3 - siehe [[https:adventofcode.com/2023/day/3]]
 
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
-** TODO Advent of code 2023 - Day 4: Scratchcards :python:
+** DONE Advent of code 2023 - Day 4: Scratchcards :python:
+CLOSED: [2023-12-19 Di 00:25]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day04.en.md
 :header-args:jupyter-python: :session /jpy:localhost#8888:b37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both
@@ -2074,7 +2075,8 @@ Reveal solution!
 #+end_details
 
 
-** TODO Advent of code 2023 - Tag 4: Scratchcards :python:
+** DONE Advent of code 2023 - Tag 4: Scratchcards :python:
+CLOSED: [2023-12-19 Di 00:25]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day04.de.md
 :header-args:jupyter-python: :session /jpy:localhost#8888:b37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both
