@@ -1628,7 +1628,7 @@ which is neither.
 #+end_src
 
 #+RESULTS:
-[[file:./data/2023-12-03-2-aoc.png]]
+[[file:./.ob-jupyter/92e5476ffb971069e91ebd51b0733f8d067ed4f0.png]]
 
 Now we use the image processing technique of dilation on the =symbols= mask. So
 that we get a new mask which covers the surroundings of all symbols. We use this
@@ -1644,7 +1644,7 @@ afterwards to check if the digits are near a symbol.
 #+end_src
 
 #+RESULTS:
-[[file:./data/2023-12-03-3-aoc.png]]
+[[file:./.ob-jupyter/c6e63862aef82ff3f8a64ff3686fb8f7fe239f65.png]]
 
 Creating this masks as before could be understood as a *binary segmentation*, as
 each element in our mask is either =True= or =False=. To extract the single
@@ -1662,7 +1662,7 @@ segmentation*, where each connected segment has an own index.
 #+end_src
 
 #+RESULTS:
-[[file:./data/2023-12-03-4-aoc.png]]
+[[file:./.ob-jupyter/73d9894da10ebf83909ef909e542f608e4d4a097.png]]
 
 Now, for each instance, we check if the dilated binary mask overlaps with the
 instance and if yes, we extract the number. 
@@ -1677,12 +1677,17 @@ instance and if yes, we extract the number.
 
 Then, we just sum up:
 
+#+begin_details
+#+begin_summary
+Reveal solution!
+#+end_summary
 #+begin_src jupyter-python
   sum(numbers)
 #+end_src
 
 #+RESULTS:
 : 527364
+#+end_details
 
 *** Part 2
 
@@ -1747,7 +1752,7 @@ first, we could merge two independent gears into one instance.
 #+end_src
 
 #+RESULTS:
-[[file:./data/2023-12-03-5-aoc.png]]
+[[file:./.ob-jupyter/ae256a47b14244f1e8f55b38b4c1f4621e0f2187.png]]
 
 Now, we step through each gear instance, create a mask for that gear, dilate it,
 and then step through all digits and check if they are in the gear mask. If we
@@ -1770,13 +1775,18 @@ ratios to a list.
 #+RESULTS:
 
 Now, we just sum the output again:
-
+#+begin_details
+#+begin_summary
+Reveal solution!
+#+end_summary
 #+begin_src jupyter-python
   sum(gear_ratios)
 #+end_src
 
 #+RESULTS:
 : 79026871
+#+end_details
+
 
 ** DONE Advent of code 2023 - Tag 3: Gear Ratios :python:
 CLOSED: [2023-12-18 Mo 01:01]
