@@ -1514,7 +1514,7 @@ And for this one, the sum is:
 #+RESULTS:
 : 66027
 
-** DONE Advent of code 2023 - Tag 2: Cube Conundrum :python:
+** DONE Advent of code 2023 - Tag 2: Würfelrätsel :python:
 CLOSED: [2023-12-11 Mo 23:38]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day02.de.md
@@ -1787,7 +1787,7 @@ Reveal solution!
 : 79026871
 #+end_details
 
-** DONE Advent of code 2023 - Tag 3: Gear Ratios :python:
+** DONE Advent of code 2023 - Tag 3: Getriebeübersetzungen :python:
 CLOSED: [2023-12-18 Mo 01:01]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day03.de.md
@@ -2052,7 +2052,7 @@ Reveal solution!
 #+end_details
 
 
-** DONE Advent of code 2023 - Tag 4: Scratchcards :python:
+** DONE Advent of code 2023 - Tag 4: Rubbelkarten :python:
 CLOSED: [2023-12-19 Di 00:25]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day04.de.md
@@ -2061,6 +2061,526 @@ CLOSED: [2023-12-19 Di 00:25]
 
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 4 - siehe [[https:adventofcode.com/2023/day/4]]
+
+Für die Lösungen siehe die englische Version dieses Blogbeitrages.
+** TODO Advent of code 2023 - Day 5: If You Give A Seed A Fertilizer :python:
+:PROPERTIES:
+:EXPORT_FILE_NAME: aoc2023-day05.en.md
+:header-args:jupyter-python: :session /jpy:localhost#8888:b37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both
+:END:
+
+This year I try to record my attempt at solving the *Advent of Code 2023*
+riddles. This is Day 5 - see [[https:adventofcode.com/2023/day/5]]
+*** Part 1
+Lets first read the task:
+
+#+begin_quote
+The almanac (your puzzle input) lists all of the seeds that need to be planted.
+It also lists what type of soil to use with each kind of seed, what type of
+fertilizer to use with each kind of soil, what type of water to use with each
+kind of fertilizer, and so on. Every type of seed, soil, fertilizer and so on is
+identified with a number, but numbers are reused by each category - that is,
+soil =123= and fertilizer =123= aren't necessarily related to each other.
+
+For example:
+#+end_quote
+
+#+begin_example
+seeds: 79 14 55 13
+
+seed-to-soil map:
+50 98 2
+52 50 48
+
+soil-to-fertilizer map:
+0 15 37
+37 52 2
+39 0 15
+
+fertilizer-to-water map:
+49 53 8
+0 11 42
+42 0 7
+57 7 4
+
+water-to-light map:
+88 18 7
+18 25 70
+
+light-to-temperature map:
+45 77 23
+81 45 19
+68 64 13
+
+temperature-to-humidity map:
+0 69 1
+1 0 69
+
+humidity-to-location map:
+60 56 37
+56 93 4
+#+end_example
+
+#+begin_quote
+The almanac starts by listing which seeds need to be planted: seeds =79=, =14=,
+=55=, and =13=.
+
+The rest of the almanac contains a list of *maps* which describe how to convert
+numbers from a *source category* into numbers in a *destination category*. That
+is, the section that starts with =seed-to-soil map=: describes how to convert a
+*seed number* (the source) to a *soil number* (the destination). This lets the
+gardener and his team know which soil to use with which seeds, which water to
+use with which fertilizer, and so on.
+
+Rather than list every source number and its corresponding destination number
+one by one, the maps describe entire *ranges* of numbers that can be converted.
+Each line within a map contains three numbers: the *destination range start*,
+the *source range start*, and the *range length*.
+
+Consider again the example =seed-to-soil map=:
+
+=50 98 2
+52 50 48=
+
+The first line has a *destination range start* of =50=, a *source range start*
+of =98=, and a *range length* of =2=. This line means that the source range
+starts at =98= and contains two values: =98= and =99=. The destination range is
+the same length, but it starts at =50=, so its two values are =50= and =51=.
+With this information, you know that seed number =98= corresponds to soil number
+=50= and that seed number =99= corresponds to soil number =51=.
+o
+The second line means that the source range starts at =50= and contains =48=
+values: =50=, =51=, ..., =96=, =97=. This corresponds to a destination range
+starting at =52= and also containing =48= values: =52=, =53=, ..., =98=, =99=.
+So, seed number =53= corresponds to soil number =55=.
+
+Any source numbers that *aren't mapped* correspond to the *same* destination
+number. So, seed number =10= corresponds to soil number =10=.
+
+So, the entire list of seed numbers and their corresponding soil numbers looks
+like this:
+#+end_quote
+
+#+begin_example
+seed  soil
+0     0
+1     1
+...   ...
+48    48
+49    49
+50    52
+51    53
+...   ...
+96    98
+97    99
+98    50
+99    51
+#+end_example
+
+#+begin_quote
+With this map, you can look up the soil number required for each initial seed
+number:
+
+- Seed number =79= corresponds to soil number =81=.
+- Seed number =14= corresponds to soil number =14=.
+- Seed number =55= corresponds to soil number =57=.
+- Seed number =13= corresponds to soil number =13=.
+
+The gardener and his team want to get started as soon as possible, so they'd
+like to know the closest location that needs a seed. Using these maps, find *the
+lowest location number that corresponds to any of the initial seeds*. To do
+this, you'll need to convert each seed number through other categories until you
+can find its corresponding *location number*. In this example, the corresponding
+types are:
+
+- Seed =79=, soil =81=, fertilizer =81=, water =81=, light =74=, temperature
+  =78=, humidity =78=, location =82=.
+- Seed =14=, soil =14=, fertilizer =53=, water =49=, light =42=, temperature
+  =42=, humidity =43=, location =43=.
+- Seed =55=, soil =57=, fertilizer =57=, water =53=, light =46=, temperature
+  =82=, humidity =82=, location =86=.
+- Seed =13=, soil =13=, fertilizer =52=, water =41=, light =34=, temperature
+  =34=, humidity =35=, location =35=.
+
+So, the lowest location number in this example is =35=.
+
+*What is the lowest location number that corresponds to any of the initial seed
+ numbers?*
+#+end_quote
+
+Wow, this task is a mouthful...
+
+Let's start slowly and load the data. Our input text document contains several
+maps, which are clearly separated and have a title (=seed-to-soil map= etc). So
+we can tell pandas where each map starts and give each map a dataframe. I got
+the values for the =skiprows= and =nrows= argument by looking at the input file
+and... counting
+:)
+
+#+begin_src jupyter-python
+  import pandas as pd
+  import sys
+
+  seeds = pd.read_table('data/2023-12-05-1-aoc.txt', nrows=1, sep=' ',
+                        header=None, index_col=0)
+  seeds = seeds.values.flatten()
+
+  map_opt = {'filepath_or_buffer': 'data/2023-12-05-1-aoc.txt',
+             'header': None, 'sep': ' ', 'dtype': 'Int64'}
+
+  seed_soil = pd.read_table(skiprows=3, nrows=23, **map_opt,
+                            names=['dest_start', 'src_start', 'range'])
+
+  soil_fert = pd.read_table(skiprows=28, nrows=9, **map_opt,
+                            names=['dest_start', 'src_start', 'range'])
+
+  fert_water = pd.read_table(skiprows=39, nrows=20, **map_opt,
+                             names=['dest_start', 'src_start', 'range'])
+
+  water_light = pd.read_table(skiprows=61, nrows=40, **map_opt,
+                              names=['dest_start', 'src_start', 'range'])
+
+  light_temp = pd.read_table(skiprows=103, nrows=36, **map_opt,
+                             names=['dest_start', 'src_start', 'range'])
+
+  temp_humi = pd.read_table(skiprows=141, nrows=35, **map_opt,
+                            names=['dest_start', 'src_start', 'range'])
+
+  humi_loc = pd.read_table(skiprows=178, nrows=26, **map_opt,
+                           names=['dest_start', 'src_start', 'range'])
+
+  maps = (seed_soil, soil_fert, fert_water, water_light, light_temp,
+          temp_humi, humi_loc)
+
+  print('seeds are just a numpy array:')
+  display(seeds)
+  print('The "humidity-to-location" map as an example:')
+  humi_loc
+  #+end_src
+
+#+RESULTS:
+:RESULTS:
+: seeds are just a numpy array:
+: array([3169137700,  271717609, 3522125441,   23376095, 1233948799,
+:         811833837,  280549587,  703867355,  166086528,   44766996,
+:        2326968141,   69162222, 2698492851,   14603069, 2755327667,
+:         348999531, 2600461189,   92332846, 1054656969,  169099767])
+: The "humidity-to-location" map as an example:
+#+begin_example
+    dest_start   src_start      range
+0   3490144003  1623866227  218040905
+1   1709610578  1620839197    3027030
+2    105449249   586389428  113279526
+3   1899604338  2167886292  348178199
+4   1712637608  2678624215  186966730
+5    218728775           0  245776251
+6   2472992580   923734334  143670388
+7   2616662968  3670169885   15297294
+8   2247782537  1395629154  225210043
+9            0   480940179  105449249
+10  4113852846  3959729057  159909096
+11  3322784653  1067404722  167359350
+12   923734334  4119638153  175329143
+13  1534964496  2516064491  162559724
+14  2631960262  3496028440  140849733
+15  2862695906  1234764072   97988355
+16  1697524220  3636878173   12086358
+17  2985646048  1332752427   62876727
+18  1099063477  2970241510  435901019
+19  4009202281  2865590945  104650565
+20  2960684261  2142924505   24961787
+21  2772809995  3406142529   89885911
+22  4273761942  3648964531   21205354
+23  3708184908  1841907132  301017373
+24   464505026   245776251  235163928
+25  3048522775  3685467179  274261878
+#+end_example
+:END:
+
+My first attempt was to actually construct ranges like in the example above,
+mapping out all possible sources and destinations. Python quickly informed my
+that even constructing one =pandas.Series= with =int64= values mapping seeds to
+soil would cost 64GB memory - not the best solution.
+
+So we take a different approach. For convenience, let's add a =src_end= and a
+=dest_end= column to our maps:
+
+
+#+begin_src jupyter-python
+  for df in maps:
+      df['src_end'] = df.loc[:, 'src_start'] + df.loc[:, 'range']
+      df['dest_end'] = df.loc[:, 'dest_start'] + df.loc[:, 'range']
+
+  print('Again the "humidity-to-location" map as an example:')
+  humi_loc
+#+end_src
+
+#+RESULTS:
+:RESULTS:
+: Again the "humidity-to-location" map as an example:
+#+begin_example
+    dest_start   src_start      range     src_end    dest_end
+0   3490144003  1623866227  218040905  1841907132  3708184908
+1   1709610578  1620839197    3027030  1623866227  1712637608
+2    105449249   586389428  113279526   699668954   218728775
+3   1899604338  2167886292  348178199  2516064491  2247782537
+4   1712637608  2678624215  186966730  2865590945  1899604338
+5    218728775           0  245776251   245776251   464505026
+6   2472992580   923734334  143670388  1067404722  2616662968
+7   2616662968  3670169885   15297294  3685467179  2631960262
+8   2247782537  1395629154  225210043  1620839197  2472992580
+9            0   480940179  105449249   586389428   105449249
+10  4113852846  3959729057  159909096  4119638153  4273761942
+11  3322784653  1067404722  167359350  1234764072  3490144003
+12   923734334  4119638153  175329143  4294967296  1099063477
+13  1534964496  2516064491  162559724  2678624215  1697524220
+14  2631960262  3496028440  140849733  3636878173  2772809995
+15  2862695906  1234764072   97988355  1332752427  2960684261
+16  1697524220  3636878173   12086358  3648964531  1709610578
+17  2985646048  1332752427   62876727  1395629154  3048522775
+18  1099063477  2970241510  435901019  3406142529  1534964496
+19  4009202281  2865590945  104650565  2970241510  4113852846
+20  2960684261  2142924505   24961787  2167886292  2985646048
+21  2772809995  3406142529   89885911  3496028440  2862695906
+22  4273761942  3648964531   21205354  3670169885  4294967296
+23  3708184908  1841907132  301017373  2142924505  4009202281
+24   464505026   245776251  235163928   480940179   699668954
+25  3048522775  3685467179  274261878  3959729057  3322784653
+#+end_example
+:END:
+
+Now, we actually compute the mapping. For each seed, we go through all mappings,
+and in each mapping through each row. We find the row which contains the mapping
+and exctract the destination, which is the source for the next map until we
+reach the last map which gives us the locations.
+
+- Approach 1: =df.itertuples()= is a convenient way to step through a
+  =pandas.DataFrame= in this example. It is faster than =df.iterrows()= and
+  returns the row as a =NamedTuple= -  nice!
+
+- Approach 2: I actually wondered if it would be faster to get all maps in one
+  =pd.DataFrame= and then iterate through the mappings. For that, let's
+  construct a new DataFrame =maps_df=, which contains all =maps=. Since the maps
+  have different lengths it is important to cast the datatype to =Int64=, which
+  is short for =pd.Int64Dtype()= and keeps values as integers, even if =NA=
+  values are in the same column.
+
+- Approach 3: A third alternative I tested (not shown here) was to check if a
+  value is in a Python =range= with the =in= operator as in: =if 3 in
+  range(5):...= . This was way too slow.
+
+#+begin_src jupyter-python
+  # mapping version 1
+  def get_location(seed):
+      current = seed
+      for df in maps:
+          current_map = [row
+                         for row in df.itertuples()
+                         if ((current > row.src_start)
+                             and (current < row.src_end))]
+          if len(current_map) == 0:
+              pass
+          elif len(current_map) == 1:
+              current = (current_map[0].dest_start
+                         + (current - current_map[0].src_start))
+          else:
+              raise ValueError('This should not happen!')
+      return current
+
+  # mapping version 2 - around 10 times slower
+  # you need to rename the maps_df columns so that they have a unique id
+  # e.g. 'src_start_1', 'src_start_2' etc
+
+  # maps_df = pd.concat(maps, axis='columns')
+
+  # def get_dest(i, src):
+  #     return (maps_df[(src > maps_df.loc[:, f'src_start_{i}']) &
+  #                     (src < maps_df.loc[:, f'src_end_{i}'])]
+  #             .loc[:, f'dest_start_{i}']
+  #             .iloc[0])
+
+  # def get_location2(seed):
+  #     dest = seed
+  #     i = 1
+  #     while i < 7:
+  #         dest = get_dest(i, dest)
+  #         i += 1
+  #     return dest
+
+  %timeit get_location(seeds[0])
+#+end_src
+
+#+RESULTS:
+: 7.81 ms ± 300 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+
+Now let's get a list of locations:
+
+#+begin_src jupyter-python
+  locations = [get_location(s) for s in seeds]
+  locations
+#+end_src
+
+#+RESULTS:
+| 2493982655 | 3209845376 | 3992357533 | 4163131463 | 4104485616 | 1952252479 | 3218677354 | 388071289 | 2181441450 | 2594336315 | 4049507670 | 2084517144 | 3119633635 | 428978312 | 3518771991 | 3704555655 | 953918455 | 2107687768 | 3448046330 | 2184454689 |
+
+Lastly, just get the minimum of all location values.
+
+#+begin_details
+#+begin_summary
+Reveal solution!
+#+end_summary
+#+begin_src jupyter-python
+  min(locations)
+#+end_src
+
+#+RESULTS:
+: 388071289
+#+end_details
+
+*** Part 2
+
+#+begin_quote
+Everyone will starve if you only plant such a small number of seeds. Re-reading
+the almanac, it looks like the =seeds:= line actually describes *ranges of seed
+numbers*.
+
+The values on the initial =seeds:= line come in pairs. Within each pair, the
+first value is the *start* of the range and the second value is the *length* of
+the range. So, in the first line of the example above:
+
+=seeds: 79 14 55 13=
+
+This line describes two ranges of seed numbers to be planted in the garden. The
+first range starts with seed number =79= and contains =14= values: =79=, =80=,
+..., =91=, =92=. The second range starts with seed number =55= and contains =13=
+values: =55=, =56=, ..., =66=, =67=.
+
+Now, rather than considering four seed numbers, you need to consider a total of
+=27= seed numbers.
+
+In the above example, the lowest location number can be obtained from seed
+number =82=, which corresponds to soil =84=, fertilizer =84=, water =84=, light
+=77=, temperature =45=, humidity =46=, and location =46=. So, the lowest
+location number is =46=.
+
+Consider all of the initial seed numbers listed in the ranges on the first line
+of the almanac. *What is the lowest location number that corresponds to any of
+the initial seed numbers?*
+#+end_quote
+
+Let's first construct a dataframe containing the range of seeds:
+
+#+begin_src jupyter-python
+  seeds_df = pd.DataFrame({'start': seeds[::2],
+                           'range': seeds[1::2],
+                           'end': seeds[::2] + seeds[1::2]})
+  print(f'There are {sum(seeds_df.loc[:, "range"]):_} seeds in total')
+  seeds_df
+
+#+end_src
+
+#+RESULTS:
+:RESULTS:
+: There are 2_549_759_327 seeds in total
+|   | start      | range     | end        |
+|---+------------+-----------+------------|
+| 0 | 3169137700 | 271717609 | 3440855309 |
+| 1 | 3522125441 | 23376095  | 3545501536 |
+| 2 | 1233948799 | 811833837 | 2045782636 |
+| 3 | 280549587  | 703867355 | 984416942  |
+| 4 | 166086528  | 44766996  | 210853524  |
+| 5 | 2326968141 | 69162222  | 2396130363 |
+| 6 | 2698492851 | 14603069  | 2713095920 |
+| 7 | 2755327667 | 348999531 | 3104327198 |
+| 8 | 2600461189 | 92332846  | 2692794035 |
+| 9 | 1054656969 | 169099767 | 1223756736 |
+:END:
+
+Now - I really needed some time to finally realize, that going through all seed
+values is really unfeasable. So how do we deal with this problem?
+
+In the end, we need the lowest location number - thus our approach is to take
+the =humi_loc= map (where ~dest_start \== 0~), start with the lowest location
+number and go up and get the corresponding seed values. The location of the
+first seed value which is inside =seeds_df= is our solution.
+
+So first we rebuild the =get_location= function to a =get_seed= function (we
+reverse the =maps= tuple with =maps[::-1]= and switch =src= and =dest=).
+
+#+begin_src jupyter-python :results scalar
+  def get_seed(location):
+      current = location
+      for df in maps[::-1]:
+          current_map = [row
+                         for row in df.itertuples()
+                         if ((current >= row.dest_start)
+                             and (current < row.dest_end))]
+          if len(current_map) == 0:
+              pass
+          elif len(current_map) == 1:
+              current = (current_map[0].src_start
+                         + (current - current_map[0].dest_start))
+          else:
+              raise ValueError('This should not happen!')
+      return current
+#+end_src
+
+#+RESULTS:
+
+To go through the possible locations efficiently, I decided to use a Python
+*generator function* to go through the locations - this function does not store
+the full list of =105_449_249= possible locations in the first batch
+(=humi_loc.loc[9, 'dest_start']=) in memory - nice for our big numbers.
+
+Lastly, we deal with the sheer amount of possible values by performing a *grid
+search*. First, we check every millionth location. After the first match, we
+stop this search and check the last million locations before the match with a
+finer grid and so on. The last grid is just =1=, so we find our lowest location.
+
+#+begin_src jupyter-python
+  def get_generator(start, end, step=1):
+      next = start
+      while next < end:
+          yield next
+          next += step
+
+  def grid_search(start: int, end: int, grid: list[int]):
+      for g in grid:
+          print(f'Start search with grid={g}')
+          loc_gen = get_generator(start, end, g)
+          for l in loc_gen:
+              current = get_seed(l)
+              if any((current >= seeds_df.loc[:, 'start']) & (current < seeds_df.loc[:, 'end'])):
+                  print(f'location {l} is the lowest which contains one of the given seeds ({current})')
+                  start = l - g
+                  end = l
+                  break
+      print('Finished search')
+
+  grid_search(start=humi_loc.loc[9, 'dest_start'],
+              end=humi_loc.loc[9, 'dest_end'],
+              grid=[1_000_000, 100_000, 1000, 1])
+#+end_src
+
+#+RESULTS:
+: Start search with grid=1000000
+: location 85000000 is the lowest which contains one of the given seeds (2605777210)
+: Start search with grid=100000
+: location 84300000 is the lowest which contains one of the given seeds (2605077210)
+: Start search with grid=1000
+: location 84207000 is the lowest which contains one of the given seeds (2604984210)
+: Start search with grid=1
+: location 84206669 is the lowest which contains one of the given seeds (2604983879)
+: Finished search
+
+** TODO Advent of code 2023 - Tag 5: Wenn du einem Samen Dünger gibst :python:
+:PROPERTIES:
+:EXPORT_FILE_NAME: aoc2023-day05.de.md
+:header-args:jupyter-python: :session /jpy:localhost#8888:b37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both
+:END:
+
+Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
+2023*. Dies ist Tag 5 - siehe [[https:adventofcode.com/2023/day/5]]
 
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
 ** TODO Connection on Mount Misery vs Corona

@@ -1,7 +1,7 @@
 +++
 title = "Homepage"
 author = ["Alex Seltmann"]
-lastmod = 2023-12-12T00:26:47+01:00
+lastmod = 2023-12-30T00:48:20+01:00
 type = """
   "docs"
   """
