@@ -2500,7 +2500,7 @@ Now - I really needed some time to finally realize, that going through all seed
 values is really unfeasable. So how do we deal with this problem?
 
 In the end, we need the lowest location number - thus our approach is to take
-the =humi_loc= map (where ~dest_start \== 0~), start with the lowest location
+the =humi_loc= map (where ~dest_start == 0~), start with the lowest location
 number and go up and get the corresponding seed values. The location of the
 first seed value which is inside =seeds_df= is our solution.
 
