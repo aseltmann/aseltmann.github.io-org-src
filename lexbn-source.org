@@ -1281,7 +1281,7 @@ Now, construct the calibration value as before...
 : 55902
 
 ** DONE Advent of code 2023 - Tag 1: Trebuchet?! :python:
-CLOSED: [2023-12-11 Mo 23:38]
+CLOSED: [2023-12-10 So 23:38]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day01.de.md
 :END:
@@ -2063,7 +2063,8 @@ Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 4 - siehe [[https:adventofcode.com/2023/day/4]]
 
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
-** TODO Advent of code 2023 - Day 5: If You Give A Seed A Fertilizer :python:
+** DONE Advent of code 2023 - Day 5: If You Give A Seed A Fertilizer :python:
+CLOSED: [2023-12-30 Sa 01:10]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day05.en.md
 :header-args:jupyter-python: :session /jpy:localhost#8888:b37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both
@@ -2573,7 +2574,8 @@ finer grid and so on. The last grid is just =1=, so we find our lowest location.
 : location 84206669 is the lowest which contains one of the given seeds (2604983879)
 : Finished search
 
-** TODO Advent of code 2023 - Tag 5: Wenn du einem Samen Dünger gibst :python:
+** DONE Advent of code 2023 - Tag 5: Wenn du einem Samen Dünger gibst :python:
+CLOSED: [2023-12-30 Sa 01:10]
 :PROPERTIES:
 :EXPORT_FILE_NAME: aoc2023-day05.de.md
 :header-args:jupyter-python: :session /jpy:localhost#8888:b37e524a-8134-4d8f-b24a-367acaf1bdd3 :pandoc t :kernel python3 :exports both
