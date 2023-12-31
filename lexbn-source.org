@@ -1071,18 +1071,18 @@ calibration values?
 Lets start jupyter in our shell to start coding!
 
 #+begin_src sh :session local :noeval
-  conda activate tf
-  jupyter lab --no-browser --port=8888
+conda activate tf
+jupyter lab --no-browser --port=8888
 #+end_src
 
 First, load the test document
 
 #+BEGIN_SRC jupyter-python
-  import pandas as pd
-  import re
+import pandas as pd
+import re
 
-  txt = pd.read_table('data/2023-12-01-1-aoc.txt', names=['code'])
-  txt
+txt = pd.read_table('data/2023-12-01-1-aoc.txt', names=['code'])
+txt
 #+END_SRC
 
 #+RESULTS:
@@ -1111,9 +1111,9 @@ for the =re.findall= version, which returns a list. To concatenate the elements
 in the list, we take use the =join= function.
 
 #+BEGIN_SRC jupyter-python
-  txt['digits'] = txt.loc[:, 'code'].apply(
-      lambda x: ''.join(re.findall(r'(\d+)', x)))
-  txt
+txt['digits'] = txt.loc[:, 'code'].apply(
+    lambda x: ''.join(re.findall(r'(\d+)', x)))
+txt
 #+END_SRC
 
 #+RESULTS:
@@ -1137,9 +1137,9 @@ in the list, we take use the =join= function.
 Next, combine the first and the last digit and convert the result from string to integer
 
 #+BEGIN_SRC jupyter-python
-  txt['calibration'] = txt.loc[:, 'digits'].apply(
-      lambda x: int(x[0] + x[-1]))
-  txt
+txt['calibration'] = txt.loc[:, 'digits'].apply(
+    lambda x: int(x[0] + x[-1]))
+txt
 #+END_SRC
 
 #+RESULTS:
@@ -1163,7 +1163,7 @@ Next, combine the first and the last digit and convert the result from string to
 Lastly, get the sum of our calibration numbers
 
 #+BEGIN_SRC jupyter-python
-  txt.loc[:, 'calibration'].sum()
+txt.loc[:, 'calibration'].sum()
 #+END_SRC
 
 #+RESULTS:
@@ -1206,26 +1206,26 @@ more digits), otherwise digits might double. Afterwards, just replace the
 spelled out digits with their numerical value.
 
 #+begin_src jupyter-python
-  # for i, r in enumerate(txt.loc[:, 'code']):
-  #     matches = re.findall(
-  #         r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', r)
-  #     result = ''.join([match for match in matches])
-  #     result = result.replace('one', '1').replace('two', '2').replace(
-  #         'three', '3').replace('four', '4').replace('five', '5').replace(
-  #         'six', '6').replace('seven', '7').replace('eight', '8').replace(
-  #         'nine', '9')
-  #     txt.loc[i, 'digits2'] = result
-  # txt
+# for i, r in enumerate(txt.loc[:, 'code']):
+#     matches = re.findall(
+#         r'(?=(\d|one|two|three|four|five|six|seven|eight|nine))', r)
+#     result = ''.join([match for match in matches])
+#     result = result.replace('one', '1').replace('two', '2').replace(
+#         'three', '3').replace('four', '4').replace('five', '5').replace(
+#         'six', '6').replace('seven', '7').replace('eight', '8').replace(
+#         'nine', '9')
+#     txt.loc[i, 'digits2'] = result
+# txt
 
-  # a very nice alternative suggested by Tomalak:
-  digits = '\d one two three four five six seven eight nine'.split()
+# a very nice alternative suggested by Tomalak:
+digits = '\d one two three four five six seven eight nine'.split()
 
 
-  txt['digits2'] = txt.loc[:, 'code'].apply(lambda v: ''.join(
-      str(digits.index(m)) if m in digits else m
-      for m in re.findall(rf'(?=({"|".join(digits)}))', v)
-  ))
-  txt
+txt['digits2'] = txt.loc[:, 'code'].apply(lambda v: ''.join(
+    str(digits.index(m)) if m in digits else m
+    for m in re.findall(rf'(?=({"|".join(digits)}))', v)
+))
+txt
 #+end_src
 
 #+RESULTS:
@@ -1249,8 +1249,8 @@ spelled out digits with their numerical value.
 Now, construct the calibration value as before...
 
 #+BEGIN_SRC jupyter-python
-  txt['calibration2'] = txt.loc[:, 'digits2'].apply(lambda x: int(x[0] + x[-1]))
-  txt
+txt['calibration2'] = txt.loc[:, 'digits2'].apply(lambda x: int(x[0] + x[-1]))
+txt
 #+END_SRC
 
 #+RESULTS:
@@ -1274,7 +1274,7 @@ Now, construct the calibration value as before...
 ... and get the correct sum!
 
 #+BEGIN_SRC jupyter-python
-  txt.loc[:, 'calibration2'].sum()
+txt.loc[:, 'calibration2'].sum()
 #+END_SRC
 
 #+RESULTS:
@@ -1353,16 +1353,16 @@ game id and the rest of the code by semicolon =;= to get the number of sets
 played in each game.
 
 #+BEGIN_SRC jupyter-python
-  import pandas as pd
-  import re
+import pandas as pd
+import re
 
-  txt = pd.read_table('data/2023-12-02-1-aoc.txt', names=['code'])
-  txt['id'] = txt.loc[:, 'code'].str.split(':').apply(
-      lambda x: int(x[0].strip('Game ')))
-  txt['code'] = txt.loc[:, 'code'].str.split(':').apply(lambda x: x[1])
-  # txt['code'] = txt.loc[:, 'code'].str.split(';')
-  # txt['nsets'] = txt.loc[:, 'code'].apply(lambda x: len(x))
-  txt
+txt = pd.read_table('data/2023-12-02-1-aoc.txt', names=['code'])
+txt['id'] = txt.loc[:, 'code'].str.split(':').apply(
+    lambda x: int(x[0].strip('Game ')))
+txt['code'] = txt.loc[:, 'code'].str.split(':').apply(lambda x: x[1])
+# txt['code'] = txt.loc[:, 'code'].str.split(';')
+# txt['nsets'] = txt.loc[:, 'code'].apply(lambda x: len(x))
+txt
 #+END_SRC
 
 #+RESULTS:
@@ -1389,16 +1389,16 @@ digits =\d+= coming before. Then we just keep the =max= imum drawn number of cub
 per color, since this is the only information that matters at the moment.
 
 #+BEGIN_SRC jupyter-python
-  txt['green'] = txt.loc[:, 'code'].apply(
-      lambda code: re.findall(r'\d+(?=.green)', code)).apply(
-          lambda list: max([int(i) for i in list]))
-  txt['red'] = txt.loc[:, 'code'].apply(
-      lambda code: re.findall(r'\d+(?=.red)', code)).apply(
-          lambda list: max([int(i) for i in list]))
-  txt['blue'] = txt.loc[:, 'code'].apply(
-      lambda code: re.findall(r'\d+(?=.blue)', code)).apply(
-          lambda list: max([int(i) for i in list]))
-  txt
+txt['green'] = txt.loc[:, 'code'].apply(
+    lambda code: re.findall(r'\d+(?=.green)', code)).apply(
+        lambda list: max([int(i) for i in list]))
+txt['red'] = txt.loc[:, 'code'].apply(
+    lambda code: re.findall(r'\d+(?=.red)', code)).apply(
+        lambda list: max([int(i) for i in list]))
+txt['blue'] = txt.loc[:, 'code'].apply(
+    lambda code: re.findall(r'\d+(?=.blue)', code)).apply(
+        lambda list: max([int(i) for i in list]))
+txt
 #+END_SRC
 
 #+RESULTS:
@@ -1423,7 +1423,7 @@ Lastly, we just filter the DataFrame to only include games where all drawn cubes
 were below or equal the number of cubes in the game and sum the result!
 
 #+BEGIN_SRC jupyter-python
-  txt['id'][(txt['green'] < 14) & (txt['red'] < 13) & (txt['blue'] < 15)].sum()
+txt['id'][(txt['green'] < 14) & (txt['red'] < 13) & (txt['blue'] < 15)].sum()
 #+END_SRC
 
 #+RESULTS:
@@ -1470,8 +1470,8 @@ Luckily, this task is made trivial by the approach we have taken before. We just
 have to multiply the =green=, =red= and =blue= columns:
 
 #+BEGIN_SRC jupyter-python
-  txt['power'] = txt.loc[:, 'green'] * txt.loc[:, 'blue'] * txt.loc[:, 'red']
-  txt
+txt['power'] = txt.loc[:, 'green'] * txt.loc[:, 'blue'] * txt.loc[:, 'red']
+txt
 #+END_SRC
 
 #+RESULTS:
@@ -1508,7 +1508,7 @@ have to multiply the =green=, =red= and =blue= columns:
 And for this one, the sum is:
 
 #+BEGIN_SRC jupyter-python
-  txt['power'].sum()
+txt['power'].sum()
 #+END_SRC
 
 #+RESULTS:
@@ -1572,22 +1572,22 @@ the part numbers in the engine schematic*?
 Okay, let's first get the input as a =numpy= character array
 
 #+begin_src jupyter-python
-  import numpy as np
-  import pandas as pd
-  import sys
-  import matplotlib.pyplot as plt
-  from scipy import ndimage as ndi
-  np.set_printoptions(threshold=sys.maxsize)
+import numpy as np
+import pandas as pd
+import sys
+import matplotlib.pyplot as plt
+from scipy import ndimage as ndi
+np.set_printoptions(threshold=sys.maxsize)
 
-  txt = pd.read_table('data/2023-12-03-1-aoc.txt', names=['code'])
-  arr = np.chararray((txt.size, txt.size), unicode=True)
+txt = pd.read_table('data/2023-12-03-1-aoc.txt', names=['code'])
+arr = np.chararray((txt.size, txt.size), unicode=True)
 
-  txt['code'] = txt.loc[:, 'code'].apply(lambda x: [i for i in x])
+txt['code'] = txt.loc[:, 'code'].apply(lambda x: [i for i in x])
 
-  for i, code in enumerate(txt['code']):
-      arr[i, :] = code
+for i, code in enumerate(txt['code']):
+    arr[i, :] = code
 
-  print((arr[:15, :15]))
+print((arr[:15, :15]))
 #+end_src
 
 #+RESULTS:
@@ -1615,16 +1615,16 @@ binary mask for all *empty* space (=.=). The *symbols* are then every character
 which is neither.  
 
 #+begin_src jupyter-python
-  digits = np.char.isdigit(arr)
-  empty = np.char.endswith(arr, '.')
-  symbols = ~(digits | empty)
-  
-  # just for visualization
-  plt.figure(figsize=(16, 5))
-  plt.subplot(131, title='symbols').matshow(symbols)
-  plt.subplot(132, title='digits').matshow(digits)
-  plt.subplot(133, title='empty').matshow(empty)
-  plt.show()
+digits = np.char.isdigit(arr)
+empty = np.char.endswith(arr, '.')
+symbols = ~(digits | empty)
+
+# just for visualization
+plt.figure(figsize=(16, 5))
+plt.subplot(131, title='symbols').matshow(symbols)
+plt.subplot(132, title='digits').matshow(digits)
+plt.subplot(133, title='empty').matshow(empty)
+plt.show()
 #+end_src
 
 #+RESULTS:
@@ -1635,12 +1635,12 @@ that we get a new mask which covers the surroundings of all symbols. We use this
 afterwards to check if the digits are near a symbol.
 
 #+begin_src jupyter-python
-  struct = ((1, 1, 1), (1, 1, 1), (1, 1, 1))
-  dilate = ndi.binary_dilation(symbols, structure=struct)
-  plt.figure(figsize=(10, 6))
-  plt.subplot(121, title='symbols').matshow(symbols[:15, :15])
-  plt.subplot(122, title='symbols dilated').matshow(dilate[:15, :15])
-  plt.show()
+struct = ((1, 1, 1), (1, 1, 1), (1, 1, 1))
+dilate = ndi.binary_dilation(symbols, structure=struct)
+plt.figure(figsize=(10, 6))
+plt.subplot(121, title='symbols').matshow(symbols[:15, :15])
+plt.subplot(122, title='symbols dilated').matshow(dilate[:15, :15])
+plt.show()
 #+end_src
 
 #+RESULTS:
@@ -1652,13 +1652,13 @@ digits, we'll convert the binary digits segmentation into a *instance
 segmentation*, where each connected segment has an own index.
 
 #+begin_src jupyter-python
-  markers, num_features = ndi.label(digits)
-  plt.figure(figsize=(10, 6))
-  plt.subplot(121, title='binary segmentation').matshow(
-      digits[:15, :15])
-  plt.subplot(122, title='instance segmentation').matshow(
-      markers[:15, :15], cmap='gnuplot')
-  plt.show()
+markers, num_features = ndi.label(digits)
+plt.figure(figsize=(10, 6))
+plt.subplot(121, title='binary segmentation').matshow(
+    digits[:15, :15])
+plt.subplot(122, title='instance segmentation').matshow(
+    markers[:15, :15], cmap='gnuplot')
+plt.show()
 #+end_src
 
 #+RESULTS:
@@ -1668,9 +1668,9 @@ Now, for each instance, we check if the dilated binary mask overlaps with the
 instance and if yes, we extract the number. 
 
 #+begin_src jupyter-python
-  numbers = [int(''.join(arr[markers == i]))
-             for i in range(1, num_features+1) 
-             if np.any((markers == i) & dilate)]
+numbers = [int(''.join(arr[markers == i]))
+           for i in range(1, num_features+1)
+           if np.any((markers == i) & dilate)]
 #+end_src
 
 #+RESULTS:
@@ -1738,17 +1738,17 @@ the instance segmentation *before* the dilation. Why? Because when we dilate
 first, we could merge two independent gears into one instance.
 
 #+begin_src jupyter-python
-  gear = np.char.endswith(arr, '*')
-  gear_markers, gear_num = ndi.label(gear)
+gear = np.char.endswith(arr, '*')
+gear_markers, gear_num = ndi.label(gear)
 
-  plt.figure(figsize=(10, 6))
-  plt.subplot(131, title='all symbols dilated').matshow(
-      symbols[:15, :15])
-  plt.subplot(132, title='gears').matshow(
-      gear[:15, :15])
-  plt.subplot(133, title='gears instances').matshow(
-      gear_markers[:15, :15], cmap='gnuplot')
-  plt.show()
+plt.figure(figsize=(10, 6))
+plt.subplot(131, title='all symbols dilated').matshow(
+    symbols[:15, :15])
+plt.subplot(132, title='gears').matshow(
+    gear[:15, :15])
+plt.subplot(133, title='gears instances').matshow(
+    gear_markers[:15, :15], cmap='gnuplot')
+plt.show()
 #+end_src
 
 #+RESULTS:
@@ -1760,16 +1760,16 @@ get two digits in the end, we multiply them to get the dear ratio and save the
 ratios to a list.
 
 #+begin_src jupyter-python
-  gear_ratios = []
-  for i in range(1, gear_num+1):
-      gear_binary = gear_markers == i
-      gear_dil = ndi.binary_dilation(gear_binary, structure=struct)
+gear_ratios = []
+for i in range(1, gear_num+1):
+    gear_binary = gear_markers == i
+    gear_dil = ndi.binary_dilation(gear_binary, structure=struct)
 
-      part_numbers = [int(''.join(arr[markers == j]))
-                      for j in range(1, num_features+1)
-                      if np.any((markers == j) & gear_dil)]
-      if len(part_numbers) == 2:
-          gear_ratios.append(part_numbers[0] * part_numbers[1])
+
+                    for j in range(1, num_features+1)
+                    if np.any((markers == j) & gear_dil)]
+    if len(part_numbers) == 2:
+        gear_ratios.append(part_numbers[0] * part_numbers[1])
 #+end_src
 
 #+RESULTS:
@@ -1860,28 +1860,28 @@ using the regex =\d+=. And we want them to be in *sets* (not lists), as we can
 logically compare sets in Python.
 
 #+begin_src jupyter-python
-  import pandas as pd
-  import re
+import pandas as pd
+import re
 
-  txt = pd.read_table('data/2023-12-04-1-aoc.txt', names=['win'])
-  txt['id'] = txt.loc[:, 'win'].str.split(':').apply(
-      lambda x: int(x[0].strip('Card ')))
-  txt['win'] = (txt.loc[:, 'win']
-                .str.split(':').apply(lambda x: x[1]))
-  txt['yours'] = (txt.loc[:, 'win']
-                  .str.split('|')
-                  .apply(lambda x: x[1])
-                  # get a list of only the numbers / digits
-                  .apply(lambda x: re.findall(r'\d+', x))
-                  # convert the list of strings to a set of integers
-                  .apply(lambda x: set([int(i) for i in x])))
-  txt['win'] = (txt.loc[:, 'win']
+txt = pd.read_table('data/2023-12-04-1-aoc.txt', names=['win'])
+txt['id'] = txt.loc[:, 'win'].str.split(':').apply(
+    lambda x: int(x[0].strip('Card ')))
+txt['win'] = (txt.loc[:, 'win']
+              .str.split(':').apply(lambda x: x[1]))
+txt['yours'] = (txt.loc[:, 'win']
                 .str.split('|')
-                .apply(lambda x: x[0])
+                .apply(lambda x: x[1])
+                # get a list of only the numbers / digits
                 .apply(lambda x: re.findall(r'\d+', x))
+                # convert the list of strings to a set of integers
                 .apply(lambda x: set([int(i) for i in x])))
+txt['win'] = (txt.loc[:, 'win']
+              .str.split('|')
+              .apply(lambda x: x[0])
+              .apply(lambda x: re.findall(r'\d+', x))
+              .apply(lambda x: set([int(i) for i in x])))
 
-  txt
+txt
 #+end_src
 
 #+RESULTS:
@@ -1908,12 +1908,12 @@ numbers. Then, the number of wins is converted to points - for all number of
 wins bigger than 1, we can get the points by =2**(n_wins-1)=.
 
 #+begin_src jupyter-python
-  txt['n_wins'] = txt.apply(
-      lambda row: len(row.loc['win'] & row.loc['yours']), axis=1)
-  txt['points'] = txt.loc[:, 'n_wins'].apply(
-      lambda x: 2**(x-1) if x > 1 else x)
+txt['n_wins'] = txt.apply(
+    lambda row: len(row.loc['win'] & row.loc['yours']), axis=1)
+txt['points'] = txt.loc[:, 'n_wins'].apply(
+    lambda x: 2**(x-1) if x > 1 else x)
 
-  txt.loc[:, ['win', 'n_wins', 'points']]
+txt.loc[:, ['win', 'n_wins', 'points']]
 #+end_src
 
 #+RESULTS:
@@ -2008,14 +2008,14 @@ number of *next games* depending on our =n_wins=. Each of these gets added the
 card number of the *current game*.
 
 #+begin_src jupyter-python
-  txt['cards'] = 0
+txt['cards'] = 0
 
-  for i, nwin in enumerate(txt.loc[:, 'n_wins']):
-      txt.loc[i, 'cards'] += 1
-      for j in range(1, nwin+1):
-          txt.loc[i+j, 'cards'] += txt.loc[i, 'cards']
+for i, nwin in enumerate(txt.loc[:, 'n_wins']):
+    txt.loc[i, 'cards'] += 1
+    for j in range(1, nwin+1):
+        txt.loc[i+j, 'cards'] += txt.loc[i, 'cards']
 
-  txt.loc[:, ['n_wins', 'cards']]
+txt.loc[:, ['n_wins', 'cards']]
 #+end_src
 
 #+RESULTS:
@@ -2072,6 +2072,11 @@ CLOSED: [2023-12-30 Sa 01:10]
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
 riddles. This is Day 5 - see [[https:adventofcode.com/2023/day/5]]
+
+Update [2023-12-31 So]:
+- subsitute get_generator() (own implementation) with range() (Python inbuilt)
+- improve grid search so that it goes through all location ranges, still
+  starting with the lowest range
 *** Part 1
 Lets first read the task:
 
@@ -2219,44 +2224,32 @@ and... counting
 :)
 
 #+begin_src jupyter-python
-  import pandas as pd
-  import sys
+import pandas as pd
+import sys
 
-  seeds = pd.read_table('data/2023-12-05-1-aoc.txt', nrows=1, sep=' ',
-                        header=None, index_col=0)
-  seeds = seeds.values.flatten()
+seeds = pd.read_table('data/2023-12-05-1-aoc.txt', nrows=1, sep=' ',
+                      header=None, index_col=0)
+seeds = seeds.values.flatten()
 
-  map_opt = {'filepath_or_buffer': 'data/2023-12-05-1-aoc.txt',
-             'header': None, 'sep': ' ', 'dtype': 'Int64'}
+map_opt = {'filepath_or_buffer': 'data/2023-12-05-1-aoc.txt',
+           'header': None, 'sep': ' ', 'dtype': 'Int64',
+           'names': ['dest_start', 'src_start', 'range']}
 
-  seed_soil = pd.read_table(skiprows=3, nrows=23, **map_opt,
-                            names=['dest_start', 'src_start', 'range'])
+seed_soil = pd.read_table(skiprows=3, nrows=23, **map_opt)
+soil_fert = pd.read_table(skiprows=28, nrows=9, **map_opt)
+fert_water = pd.read_table(skiprows=39, nrows=20, **map_opt)
+water_light = pd.read_table(skiprows=61, nrows=40, **map_opt)
+light_temp = pd.read_table(skiprows=103, nrows=36, **map_opt)
+temp_humi = pd.read_table(skiprows=141, nrows=35, **map_opt)
+humi_loc = pd.read_table(skiprows=178, nrows=26, **map_opt)
 
-  soil_fert = pd.read_table(skiprows=28, nrows=9, **map_opt,
-                            names=['dest_start', 'src_start', 'range'])
+maps = (seed_soil, soil_fert, fert_water, water_light, light_temp,
+        temp_humi, humi_loc)
 
-  fert_water = pd.read_table(skiprows=39, nrows=20, **map_opt,
-                             names=['dest_start', 'src_start', 'range'])
-
-  water_light = pd.read_table(skiprows=61, nrows=40, **map_opt,
-                              names=['dest_start', 'src_start', 'range'])
-
-  light_temp = pd.read_table(skiprows=103, nrows=36, **map_opt,
-                             names=['dest_start', 'src_start', 'range'])
-
-  temp_humi = pd.read_table(skiprows=141, nrows=35, **map_opt,
-                            names=['dest_start', 'src_start', 'range'])
-
-  humi_loc = pd.read_table(skiprows=178, nrows=26, **map_opt,
-                           names=['dest_start', 'src_start', 'range'])
-
-  maps = (seed_soil, soil_fert, fert_water, water_light, light_temp,
-          temp_humi, humi_loc)
-
-  print('seeds are just a numpy array:')
-  display(seeds)
-  print('The "humidity-to-location" map as an example:')
-  humi_loc
+print('seeds are just a numpy array:')
+display(seeds)
+print('The "humidity-to-location" map as an example:')
+humi_loc
   #+end_src
 
 #+RESULTS:
@@ -2267,39 +2260,38 @@ and... counting
 :        2326968141,   69162222, 2698492851,   14603069, 2755327667,
 :         348999531, 2600461189,   92332846, 1054656969,  169099767])
 : The "humidity-to-location" map as an example:
-#+begin_example
-    dest_start   src_start      range
-0   3490144003  1623866227  218040905
-1   1709610578  1620839197    3027030
-2    105449249   586389428  113279526
-3   1899604338  2167886292  348178199
-4   1712637608  2678624215  186966730
-5    218728775           0  245776251
-6   2472992580   923734334  143670388
-7   2616662968  3670169885   15297294
-8   2247782537  1395629154  225210043
-9            0   480940179  105449249
-10  4113852846  3959729057  159909096
-11  3322784653  1067404722  167359350
-12   923734334  4119638153  175329143
-13  1534964496  2516064491  162559724
-14  2631960262  3496028440  140849733
-15  2862695906  1234764072   97988355
-16  1697524220  3636878173   12086358
-17  2985646048  1332752427   62876727
-18  1099063477  2970241510  435901019
-19  4009202281  2865590945  104650565
-20  2960684261  2142924505   24961787
-21  2772809995  3406142529   89885911
-22  4273761942  3648964531   21205354
-23  3708184908  1841907132  301017373
-24   464505026   245776251  235163928
-25  3048522775  3685467179  274261878
-#+end_example
+|    | dest_start | src_start  | range     |
+|----+------------+------------+-----------|
+| 0  | 3490144003 | 1623866227 | 218040905 |
+| 1  | 1709610578 | 1620839197 | 3027030   |
+| 2  | 105449249  | 586389428  | 113279526 |
+| 3  | 1899604338 | 2167886292 | 348178199 |
+| 4  | 1712637608 | 2678624215 | 186966730 |
+| 5  | 218728775  | 0          | 245776251 |
+| 6  | 2472992580 | 923734334  | 143670388 |
+| 7  | 2616662968 | 3670169885 | 15297294  |
+| 8  | 2247782537 | 1395629154 | 225210043 |
+| 9  | 0          | 480940179  | 105449249 |
+| 10 | 4113852846 | 3959729057 | 159909096 |
+| 11 | 3322784653 | 1067404722 | 167359350 |
+| 12 | 923734334  | 4119638153 | 175329143 |
+| 13 | 1534964496 | 2516064491 | 162559724 |
+| 14 | 2631960262 | 3496028440 | 140849733 |
+| 15 | 2862695906 | 1234764072 | 97988355  |
+| 16 | 1697524220 | 3636878173 | 12086358  |
+| 17 | 2985646048 | 1332752427 | 62876727  |
+| 18 | 1099063477 | 2970241510 | 435901019 |
+| 19 | 4009202281 | 2865590945 | 104650565 |
+| 20 | 2960684261 | 2142924505 | 24961787  |
+| 21 | 2772809995 | 3406142529 | 89885911  |
+| 22 | 4273761942 | 3648964531 | 21205354  |
+| 23 | 3708184908 | 1841907132 | 301017373 |
+| 24 | 464505026  | 245776251  | 235163928 |
+| 25 | 3048522775 | 3685467179 | 274261878 |
 :END:
 
 My first attempt was to actually construct ranges like in the example above,
-mapping out all possible sources and destinations. Python quickly informed my
+mapping out all possible sources and destinations. Python quickly informed me
 that even constructing one =pandas.Series= with =int64= values mapping seeds to
 soil would cost 64GB memory - not the best solution.
 
@@ -2308,60 +2300,59 @@ So we take a different approach. For convenience, let's add a =src_end= and a
 
 
 #+begin_src jupyter-python
-  for df in maps:
-      df['src_end'] = df.loc[:, 'src_start'] + df.loc[:, 'range']
-      df['dest_end'] = df.loc[:, 'dest_start'] + df.loc[:, 'range']
+for df in maps:
+    df['src_end'] = df.loc[:, 'src_start'] + df.loc[:, 'range']
+    df['dest_end'] = df.loc[:, 'dest_start'] + df.loc[:, 'range']
 
-  print('Again the "humidity-to-location" map as an example:')
-  humi_loc
+print('Again the "humidity-to-location" map as an example:')
+humi_loc
 #+end_src
 
 #+RESULTS:
 :RESULTS:
 : Again the "humidity-to-location" map as an example:
-#+begin_example
-    dest_start   src_start      range     src_end    dest_end
-0   3490144003  1623866227  218040905  1841907132  3708184908
-1   1709610578  1620839197    3027030  1623866227  1712637608
-2    105449249   586389428  113279526   699668954   218728775
-3   1899604338  2167886292  348178199  2516064491  2247782537
-4   1712637608  2678624215  186966730  2865590945  1899604338
-5    218728775           0  245776251   245776251   464505026
-6   2472992580   923734334  143670388  1067404722  2616662968
-7   2616662968  3670169885   15297294  3685467179  2631960262
-8   2247782537  1395629154  225210043  1620839197  2472992580
-9            0   480940179  105449249   586389428   105449249
-10  4113852846  3959729057  159909096  4119638153  4273761942
-11  3322784653  1067404722  167359350  1234764072  3490144003
-12   923734334  4119638153  175329143  4294967296  1099063477
-13  1534964496  2516064491  162559724  2678624215  1697524220
-14  2631960262  3496028440  140849733  3636878173  2772809995
-15  2862695906  1234764072   97988355  1332752427  2960684261
-16  1697524220  3636878173   12086358  3648964531  1709610578
-17  2985646048  1332752427   62876727  1395629154  3048522775
-18  1099063477  2970241510  435901019  3406142529  1534964496
-19  4009202281  2865590945  104650565  2970241510  4113852846
-20  2960684261  2142924505   24961787  2167886292  2985646048
-21  2772809995  3406142529   89885911  3496028440  2862695906
-22  4273761942  3648964531   21205354  3670169885  4294967296
-23  3708184908  1841907132  301017373  2142924505  4009202281
-24   464505026   245776251  235163928   480940179   699668954
-25  3048522775  3685467179  274261878  3959729057  3322784653
-#+end_example
+|    | dest_start | src_start  | range     | src_end    | dest_end   |
+|----+------------+------------+-----------+------------+------------|
+| 0  | 3490144003 | 1623866227 | 218040905 | 1841907132 | 3708184908 |
+| 1  | 1709610578 | 1620839197 | 3027030   | 1623866227 | 1712637608 |
+| 2  | 105449249  | 586389428  | 113279526 | 699668954  | 218728775  |
+| 3  | 1899604338 | 2167886292 | 348178199 | 2516064491 | 2247782537 |
+| 4  | 1712637608 | 2678624215 | 186966730 | 2865590945 | 1899604338 |
+| 5  | 218728775  | 0          | 245776251 | 245776251  | 464505026  |
+| 6  | 2472992580 | 923734334  | 143670388 | 1067404722 | 2616662968 |
+| 7  | 2616662968 | 3670169885 | 15297294  | 3685467179 | 2631960262 |
+| 8  | 2247782537 | 1395629154 | 225210043 | 1620839197 | 2472992580 |
+| 9  | 0          | 480940179  | 105449249 | 586389428  | 105449249  |
+| 10 | 4113852846 | 3959729057 | 159909096 | 4119638153 | 4273761942 |
+| 11 | 3322784653 | 1067404722 | 167359350 | 1234764072 | 3490144003 |
+| 12 | 923734334  | 4119638153 | 175329143 | 4294967296 | 1099063477 |
+| 13 | 1534964496 | 2516064491 | 162559724 | 2678624215 | 1697524220 |
+| 14 | 2631960262 | 3496028440 | 140849733 | 3636878173 | 2772809995 |
+| 15 | 2862695906 | 1234764072 | 97988355  | 1332752427 | 2960684261 |
+| 16 | 1697524220 | 3636878173 | 12086358  | 3648964531 | 1709610578 |
+| 17 | 2985646048 | 1332752427 | 62876727  | 1395629154 | 3048522775 |
+| 18 | 1099063477 | 2970241510 | 435901019 | 3406142529 | 1534964496 |
+| 19 | 4009202281 | 2865590945 | 104650565 | 2970241510 | 4113852846 |
+| 20 | 2960684261 | 2142924505 | 24961787  | 2167886292 | 2985646048 |
+| 21 | 2772809995 | 3406142529 | 89885911  | 3496028440 | 2862695906 |
+| 22 | 4273761942 | 3648964531 | 21205354  | 3670169885 | 4294967296 |
+| 23 | 3708184908 | 1841907132 | 301017373 | 2142924505 | 4009202281 |
+| 24 | 464505026  | 245776251  | 235163928 | 480940179  | 699668954  |
+| 25 | 3048522775 | 3685467179 | 274261878 | 3959729057 | 3322784653 |
 :END:
 
-Now, we actually compute the mapping. For each seed, we go through all mappings,
-and in each mapping through each row. We find the row which contains the mapping
-and exctract the destination, which is the source for the next map until we
-reach the last map which gives us the locations.
+Now we actually compute the mapping. For each seed, we go through all mappings
+and in each mapping we go through each row. We find the row which contains the
+mapping and exctract the destination, which is the source for the next map until
+we reach the last map which gives us the locations.
 
 - Approach 1: =df.itertuples()= is a convenient way to step through a
   =pandas.DataFrame= in this example. It is faster than =df.iterrows()= and
   returns the row as a =NamedTuple= -  nice!
 
 - Approach 2: I actually wondered if it would be faster to get all maps in one
-  =pd.DataFrame= and then iterate through the mappings. For that, let's
-  construct a new DataFrame =maps_df=, which contains all =maps=. Since the maps
+  =pd.DataFrame= and then iterate through the mappings. To test this let's
+  construct a new DataFrame =maps_df= which contains all =maps=. Since the maps
   have different lengths it is important to cast the datatype to =Int64=, which
   is short for =pd.Int64Dtype()= and keeps values as integers, even if =NA=
   values are in the same column.
@@ -2371,54 +2362,54 @@ reach the last map which gives us the locations.
   range(5):...= . This was way too slow.
 
 #+begin_src jupyter-python
-  # mapping version 1
-  def get_location(seed):
-      current = seed
-      for df in maps:
-          current_map = [row
-                         for row in df.itertuples()
-                         if ((current > row.src_start)
-                             and (current < row.src_end))]
-          if len(current_map) == 0:
-              pass
-          elif len(current_map) == 1:
-              current = (current_map[0].dest_start
-                         + (current - current_map[0].src_start))
-          else:
-              raise ValueError('This should not happen!')
-      return current
+# mapping version 1
+def get_location(seed):
+    current = seed
+    for df in maps:
+        current_map = [row
+                       for row in df.itertuples()
+                       if ((current > row.src_start)
+                           and (current < row.src_end))]
+        if len(current_map) == 0:
+            pass
+        elif len(current_map) == 1:
+            current = (current_map[0].dest_start
+                       + (current - current_map[0].src_start))
+        else:
+            raise ValueError('This should not happen!')
+    return current
 
-  # mapping version 2 - around 10 times slower
-  # you need to rename the maps_df columns so that they have a unique id
-  # e.g. 'src_start_1', 'src_start_2' etc
+# mapping version 2 - around 10 times slower
+# you need to rename the maps_df columns so that they have a unique id
+# e.g. 'src_start_1', 'src_start_2' etc
 
-  # maps_df = pd.concat(maps, axis='columns')
+# maps_df = pd.concat(maps, axis='columns')
 
-  # def get_dest(i, src):
-  #     return (maps_df[(src > maps_df.loc[:, f'src_start_{i}']) &
-  #                     (src < maps_df.loc[:, f'src_end_{i}'])]
-  #             .loc[:, f'dest_start_{i}']
-  #             .iloc[0])
+# def get_dest(i, src):
+#     return (maps_df[(src > maps_df.loc[:, f'src_start_{i}']) &
+#                     (src < maps_df.loc[:, f'src_end_{i}'])]
+#             .loc[:, f'dest_start_{i}']
+#             .iloc[0])
 
-  # def get_location2(seed):
-  #     dest = seed
-  #     i = 1
-  #     while i < 7:
-  #         dest = get_dest(i, dest)
-  #         i += 1
-  #     return dest
+# def get_location2(seed):
+#     dest = seed
+#     i = 1
+#     while i < 7:
+#         dest = get_dest(i, dest)
+#         i += 1
+#     return dest
 
-  %timeit get_location(seeds[0])
+%timeit get_location(seeds[0])
 #+end_src
 
 #+RESULTS:
-: 7.81 ms ± 300 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
+: 8.01 ms ± 370 µs per loop (mean ± std. dev. of 7 runs, 100 loops each)
 
 Now let's get a list of locations:
 
 #+begin_src jupyter-python
-  locations = [get_location(s) for s in seeds]
-  locations
+locations = [get_location(s) for s in seeds]
+locations
 #+end_src
 
 #+RESULTS:
@@ -2472,11 +2463,11 @@ the initial seed numbers?*
 Let's first construct a dataframe containing the range of seeds:
 
 #+begin_src jupyter-python
-  seeds_df = pd.DataFrame({'start': seeds[::2],
-                           'range': seeds[1::2],
-                           'end': seeds[::2] + seeds[1::2]})
-  print(f'There are {sum(seeds_df.loc[:, "range"]):_} seeds in total')
-  seeds_df
+seeds_df = pd.DataFrame({'start': seeds[::2],
+                         'range': seeds[1::2],
+                         'end': seeds[::2] + seeds[1::2]})
+print(f'There are {sum(seeds_df.loc[:, "range"]):_} seeds in total')
+seeds_df
 
 #+end_src
 
@@ -2500,67 +2491,67 @@ Let's first construct a dataframe containing the range of seeds:
 Now - I really needed some time to finally realize, that going through all seed
 values is really unfeasable. So how do we deal with this problem?
 
-In the end, we need the lowest location number - thus our approach is to take
-the =humi_loc= map (where ~dest_start == 0~), start with the lowest location
-number and go up and get the corresponding seed values. The location of the
-first seed value which is inside =seeds_df= is our solution.
+In the end we need the lowest location number - thus our approach is to take
+the =humi_loc= map, start with the lowest location number and go up and get the
+corresponding seed values. The location of the first seed value which is inside
+=seeds_df= is our solution.
 
 So first we rebuild the =get_location= function to a =get_seed= function (we
 reverse the =maps= tuple with =maps[::-1]= and switch =src= and =dest=).
 
 #+begin_src jupyter-python :results scalar
-  def get_seed(location):
-      current = location
-      for df in maps[::-1]:
-          current_map = [row
-                         for row in df.itertuples()
-                         if ((current >= row.dest_start)
-                             and (current < row.dest_end))]
-          if len(current_map) == 0:
-              pass
-          elif len(current_map) == 1:
-              current = (current_map[0].src_start
-                         + (current - current_map[0].dest_start))
-          else:
-              raise ValueError('This should not happen!')
-      return current
+def get_seed(location):
+    current = location
+    for df in maps[::-1]:
+        current_map = [row
+                       for row in df.itertuples()
+                       if ((current >= row.dest_start)
+                           and (current < row.dest_end))]
+        if len(current_map) == 0:
+            pass
+        elif len(current_map) == 1:
+            current = (current_map[0].src_start
+                       + (current - current_map[0].dest_start))
+        else:
+            raise ValueError('This should not happen!')
+    return current
 #+end_src
 
 #+RESULTS:
 
-To go through the possible locations efficiently, I decided to use a Python
-*generator function* to go through the locations - this function does not store
-the full list of =105_449_249= possible locations in the first batch
-(=humi_loc.loc[9, 'dest_start']=) in memory - nice for our big numbers.
+Since the Python 3 =range= function does not store it's contents in memory
+(similar to a generator), it is well suited to go through these large ranges.
 
 Lastly, we deal with the sheer amount of possible values by performing a *grid
 search*. First, we check every millionth location. After the first match, we
 stop this search and check the last million locations before the match with a
 finer grid and so on. The last grid is just =1=, so we find our lowest location.
 
+Update: We order our locations from smallest to largest with =sort_values= and
+go through them - but the search stops after the first match, since that will be
+our lowest location.
+
 #+begin_src jupyter-python
-  def get_generator(start, end, step=1):
-      next = start
-      while next < end:
-          yield next
-          next += step
+def grid_search(start: int, end: int, grid: list[int]):
+    success = False
+    for g in grid:
+        print(f'Start search with grid={g}')
+        for l in range(start, end, g):
+            current = get_seed(l)
+            if any((current >= seeds_df.loc[:, 'start']) & (current < seeds_df.loc[:, 'end'])):
+                print(f'location {l} is the lowest which contains one of the given seeds ({current})')
+                start = l - g
+                end = l
+                success = True
+                break
+    return success
 
-  def grid_search(start: int, end: int, grid: list[int]):
-      for g in grid:
-          print(f'Start search with grid={g}')
-          loc_gen = get_generator(start, end, g)
-          for l in loc_gen:
-              current = get_seed(l)
-              if any((current >= seeds_df.loc[:, 'start']) & (current < seeds_df.loc[:, 'end'])):
-                  print(f'location {l} is the lowest which contains one of the given seeds ({current})')
-                  start = l - g
-                  end = l
-                  break
-      print('Finished search')
-
-  grid_search(start=humi_loc.loc[9, 'dest_start'],
-              end=humi_loc.loc[9, 'dest_end'],
-              grid=[1_000_000, 100_000, 1000, 1])
+for row in humi_loc.sort_values('dest_start').itertuples():
+    success = grid_search(start=row.dest_start, end=row.dest_end,
+                          grid=[1_000_000, 100_000, 1000, 1])
+    if success:
+        print('Finished search')
+        break
 #+end_src
 
 #+RESULTS:

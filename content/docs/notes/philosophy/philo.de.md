@@ -1,7 +1,7 @@
 +++
 title = "Philosopie"
 author = ["Alex Seltmann"]
-lastmod = 2023-12-30T00:48:24+01:00
+lastmod = 2023-12-31T01:15:13+01:00
 draft = true
 creator = "Emacs 29.1 (Org mode 9.7 + ox-hugo)"
 +++
