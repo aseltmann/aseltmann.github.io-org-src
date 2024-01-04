@@ -2969,7 +2969,7 @@ camel
 For sorting, =pandas= contributes the =sort_values= method, which supports
 sorting by multiple columns (here, we first sort according to =type=, then =c0=,
 =c1=, ...). For easier sorting by numerical values, we convert the values using
-the =card_dict= dictionary, which implements our giving sorting order.
+the =card_dict= dictionary, which implements the given sorting order.
 
 #+begin_src jupyter-python
 card_dict = {c: i for i, c in enumerate([7, 6, 5, 4, 3, 2, 1, '2', '3',
@@ -3062,8 +3062,8 @@ dictionary, otherwise the method stays the same!
 
 Let's first write =get_type_joker()=: if no joker is in the cards, we can just
 refer to =get_type()=. If we have 1, 2 or 5 different card faces, the answer is
-trivial. Only if we have 3 or 4 different faces, we have to check the number of
-jokers and the maximum number of other faces.
+trivial. We only have to use the number of jokers and the maximum number of
+other faces if we have 3 or 4 different faces.
 
 Note: if a =J= is present, there can never be *high card* (~type = 7~), because
 we always can get *one pair*. Also we can never get *two pair* (~type = 5~),
