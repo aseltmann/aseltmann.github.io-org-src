@@ -1,0 +1,18 @@
+#+title: Blog and notes setupfile
+#+AUTHOR: Alva Seltmann
+#+LANGUAGE: en
+#+PROPERTY: header-args:sh :results verbatim
+#+PROPERTY: header-args:jupyter-python :session /jpy:localhost#8888:feb-neutro
+#+PROPERTY: header-args:jupyter-python+ :pandoc t
+#+PROPERTY: header-args:jupyter-python+ :async yes
+#+PROPERTY: header-args:jupyter-python+ :kernel conda-env-py-science-py
+#+PROPERTY: header-args:jupyter-python+ :output-dir data
+#+PROPERTY: header-args:jupyter-R :session /jpy:localhost#8888:r-base
+#+PROPERTY: header-args:jupyter-R+ :pandoc t
+#+PROPERTY: header-args:jupyter-R+ :async yes
+#+PROPERTY: header-args:jupyter-R+ :kernel conda-env-r-base-r
+#+PROPERTY: header-args :eval never-export :exports both
+#+OPTIONS: toc:4
+#+OPTIONS: H:4
+#+HTML_HEAD_EXTRA: <style type="text/css">details:hover {background:pink;}</style>
+#+HTML_HEAD_EXTRA: <style type="text/css">table {display: block; overflow-x: auto; white-space: nowrap;}</style>
