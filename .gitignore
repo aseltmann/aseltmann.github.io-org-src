@@ -7,7 +7,6 @@
 .gitignore~
 # hugo
 public/
-aseltmann.github.io-hugo/
 exampleSite/public/
 .DS_Store
 .hugo_build.lock
