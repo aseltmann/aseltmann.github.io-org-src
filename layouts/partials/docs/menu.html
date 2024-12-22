@@ -1,6 +1,12 @@
 <nav>
-{{ partial "docs/brand" . }}
-{{ partial "docs/search" . }}
+  {{ partial "docs/brand" . }}
+  <a href="{{ .Site.BaseURL | relLangURL }}">
+    {{- with .Site.Params.BookLogo -}}
+    <img src="{{ . | relURL }}" alt="Logo" width="100%"/>
+    {{- end -}}
+  </a>
+
+  {{ partial "docs/search" . }}
 {{ if hugo.IsMultilingual }}
   {{ partial "docs/languages" . }}
 {{ end }}
