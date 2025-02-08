@@ -1,7 +1,7 @@
 +++
 title = "Poetry"
 author = ["Alva Seltmann"]
-lastmod = 2024-12-22T01:44:35+01:00
+lastmod = 2025-02-08T18:43:19+01:00
 draft = false
 creator = "Emacs 29.4 (Org mode 9.7.11 + ox-hugo)"
 +++
@@ -11,6 +11,7 @@ creator = "Emacs 29.4 (Org mode 9.7.11 + ox-hugo)"
 <div class="heading">Table of Contents</div>
 
 - [Lǎozǐ](#lǎozǐ)
+- [Aphorisms](#aphorisms)
 
 </div>
 <!--endtoc-->
@@ -125,3 +126,14 @@ And value the nourishing mother<br />
 </div>
 </div>
 </details>
+
+
+## Aphorisms {#aphorisms}
+
+<div class="verse">
+
+Too much of a good thing<br />
+can be wonderful<br />
+&nbsp;&nbsp;&nbsp;&nbsp;---Mae West, Goodness had Nothing to Do with It (1959)<br />
+
+</div>

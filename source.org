@@ -47,6 +47,34 @@ davor in der [[http://www.biophysical-imaging.com][Biophysical Imaging Gruppe]] 
 Ich bin per Email erreichbar unter =alva.seltmann (at) rub
 (dot) de=. Weiterhin bin ich zu finden auf [[https://github.com/aseltmann][Github]].
 
+* Publications
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/publications
+:END:
+** Publications
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index.en.md
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
+:END:
+
+#+begin_export html
+<script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fzotero-mypublications%2Fapolea&jsonp=1"></script>
+#+end_export
+
+* Publikationen
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: docs/publications
+:END:
+** Publikationen
+:PROPERTIES:
+:EXPORT_FILE_NAME: _index.de.md
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
+:END:
+#f5f5f5
+#+begin_export html
+<script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fzotero-mypublications%2Fapolea&jsonp=1"></script>
+#+end_export
+
 # * Projects
 # :PROPERTIES:
 # :EXPORT_HUGO_SECTION: docs/projects
