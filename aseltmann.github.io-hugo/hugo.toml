@@ -11,9 +11,6 @@ DefaultContentLanguage = "en"
 disablePathToLower = true
 enableGitInfo = true
 
-# disqus setup
-disqusShortname = "lexbn"
-
 # Needed for mermaid/katex shortcodes
 [markup]
 [markup.goldmark.renderer]
@@ -47,7 +44,7 @@ disqusShortname = "lexbn"
 [Params]
   # (Optional, default light) Sets color theme: light, dark or auto.
   # Theme 'auto' switches between dark and light modes based on browser/os preferences
-  BookTheme = 'auto'
+  BookTheme = 'dark'
 
   # (Optional, default true) Controls table of contents visibility on right side of pages.
   # Start and end levels can be controlled with markup.tableOfContents setting.

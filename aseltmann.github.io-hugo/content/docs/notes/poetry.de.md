@@ -12,6 +12,7 @@ creator = "Emacs 29.4 (Org mode 9.7.11 + ox-hugo)"
 
 - [Erich Fried](#erich-fried)
 - [Lǎozǐ](#lǎozǐ)
+- [Aphorismen](#aphorismen)
 
 </div>
 <!--endtoc-->
@@ -263,3 +264,25 @@ Der ich die nährende Mutter verehre.<br />
 </div>
 </div>
 </details>
+
+
+## Aphorismen {#aphorismen}
+
+<div class="verse">
+
+Zu viel des Guten<br />
+kann wunderbar sein.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;---Mae West, Goodness had Nothing to Do with It (1959)<br />
+
+</div>
+
+<div class="verse">
+
+Arbeitswut ist eine schwer erklärbare<br />
+psychische Störung<br />
+die mit einer Tasse Kaffee<br />
+und einer gemütlichen Plauderei<br />
+überwunden werden kann.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;---Anonym<br />
+
+</div>
