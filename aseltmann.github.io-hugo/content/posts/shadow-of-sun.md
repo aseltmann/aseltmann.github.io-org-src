@@ -3,24 +3,11 @@ title = """
   Reading "The Shadow of the Sun" by Ryszard Kapuściński
   """
 author = ["Alva Seltmann"]
-lastmod = 2024-12-22T00:55:57+01:00
+lastmod = 2025-02-09T19:36:25+01:00
 categories = ["books"]
 draft = true
 creator = "Emacs 29.4 (Org mode 9.7.11 + ox-hugo)"
 +++
-
-<div class="ox-hugo-toc toc">
-
-<div class="heading">Table of Contents</div>
-
-- [p 29: Course and temperature of the _first greeting_ defines fate of the relationship](#p-29-course-and-temperature-of-the-first-greeting-defines-fate-of-the-relationship)
-- [p 36ff.: colonial heritage](#p-36ff-dot-colonial-heritage)
-- [p60: Secrets of Serengeti](#p60-secrets-of-serengeti)
-- [Europeans, Africans and Racism](#europeans-africans-and-racism)
-- [wonders](#wonders)
-
-</div>
-<!--endtoc-->
 
 -   State "TODO"       from "PENDING"    <span class="timestamp-wrapper"><span class="timestamp">[2021-01-13 Mi 23:24]</span></span>
 -   State "PENDING"    from "DONE"       <span class="timestamp-wrapper"><span class="timestamp">[2021-01-13 Mi 23:24]</span></span>

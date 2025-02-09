@@ -6,19 +6,6 @@ draft = true
 creator = "Emacs 29.4 (Org mode 9.7.11 + ox-hugo)"
 +++
 
-<div class="ox-hugo-toc toc">
-
-<div class="heading">Table of Contents</div>
-
-- [Notes on specific countries](#notes-on-specific-countries)
-- [Phases after WWII](#phases-after-wwii)
-    - [1st phase: 50s/60s - rapid decolonization, optimism, euphoria](#1st-phase-50s-60s-rapid-decolonization-optimism-euphoria)
-    - [2nd phase: 70s/80s - rapid growth of population, pessimism](#2nd-phase-70s-80s-rapid-growth-of-population-pessimism)
-
-</div>
-<!--endtoc-->
-
-
 ## Notes on specific countries {#notes-on-specific-countries}
 
 {{< tabs "uniqueid" >}}

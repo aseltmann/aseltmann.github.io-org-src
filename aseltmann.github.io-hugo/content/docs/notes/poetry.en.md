@@ -1,21 +1,10 @@
 +++
 title = "Poetry"
 author = ["Alva Seltmann"]
-lastmod = 2025-02-08T18:43:19+01:00
+lastmod = 2025-02-09T19:36:20+01:00
 draft = false
 creator = "Emacs 29.4 (Org mode 9.7.11 + ox-hugo)"
 +++
-
-<div class="ox-hugo-toc toc">
-
-<div class="heading">Table of Contents</div>
-
-- [Lǎozǐ](#lǎozǐ)
-- [Aphorisms](#aphorisms)
-
-</div>
-<!--endtoc-->
-
 
 ## Lǎozǐ {#lǎozǐ}
 

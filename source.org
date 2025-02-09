@@ -55,8 +55,8 @@ Ich bin per Email erreichbar unter =alva.seltmann (at) rub
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index.en.md
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :BookComments false
 :END:
-
 #+begin_export html
 <script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fzotero-mypublications%2Fapolea&jsonp=1"></script>
 #+end_export
@@ -69,8 +69,8 @@ Ich bin per Email erreichbar unter =alva.seltmann (at) rub
 :PROPERTIES:
 :EXPORT_FILE_NAME: _index.de.md
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :bookCollapseSection false
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :BookComments false
 :END:
-#f5f5f5
 #+begin_export html
 <script src="https://bibbase.org/show?bib=https%3A%2F%2Fbibbase.org%2Fzotero-mypublications%2Fapolea&jsonp=1"></script>
 #+end_export
@@ -1089,7 +1089,7 @@ CLOSED: [2023-12-10 So 03:05]
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
 riddles. This is Day 1 - see [[https:adventofcode.com/2023/day/1]]
-
+#+hugo: more
 *** Part 1
 
 #+begin_details
@@ -1363,6 +1363,7 @@ CLOSED: [2023-12-11 Mo 23:38]
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
 riddles. This is Day 2 - see [[https:adventofcode.com/2023/day/2]]
+#+hugo: more
 *** Part 1
 
 #+begin_details
@@ -1589,7 +1590,7 @@ CLOSED: [2023-12-11 Mo 23:38]
 
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 2 - siehe [[https:adventofcode.com/2023/day/2]]
-
+#+hugo: more
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
 ** DONE Advent of code 2023 - Day 3: Gear Ratios :python:
 CLOSED: [2023-12-18 Mo 01:01]
@@ -1599,6 +1600,7 @@ CLOSED: [2023-12-18 Mo 01:01]
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
 riddles. This is Day 3 - see [[https:adventofcode.com/2023/day/3]]
+#+hugo: more
 *** Part 1
 
 #+begin_details
@@ -1863,7 +1865,7 @@ CLOSED: [2023-12-18 Mo 01:01]
 
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 3 - siehe [[https:adventofcode.com/2023/day/3]]
-
+#+hugo: more
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
 ** DONE Advent of code 2023 - Day 4: Scratchcards :python:
 CLOSED: [2023-12-19 Di 00:25]
@@ -1873,6 +1875,7 @@ CLOSED: [2023-12-19 Di 00:25]
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
 riddles. This is Day 4 - see [[https:adventofcode.com/2023/day/4]]
+#+hugo: more
 *** Part 1
 
 #+begin_details
@@ -2128,7 +2131,7 @@ CLOSED: [2023-12-19 Di 00:25]
 
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 4 - siehe [[https:adventofcode.com/2023/day/4]]
-
+#+hugo: more
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
 ** DONE Advent of code 2023 - Day 5: If You Give A Seed A Fertilizer :python:
 CLOSED: [2023-12-30 Sa 01:10]
@@ -2138,7 +2141,7 @@ CLOSED: [2023-12-30 Sa 01:10]
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
 riddles. This is Day 5 - see [[https:adventofcode.com/2023/day/5]]
-
+#+hugo: more
 Update [2023-12-31 So]:
 - substitute =get_generator()= (own implementation) with =range()= (Python inbuilt)
 - improve grid search so that it goes through all location ranges, still
@@ -2646,7 +2649,7 @@ CLOSED: [2023-12-30 Sa 01:10]
 
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 5 - siehe [[https:adventofcode.com/2023/day/5]]
-
+#+hugo: more
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
 ** DONE Advent of code 2023 - Day 6: Wait For It :python:
 CLOSED: [2024-01-04 Do 00:44]
@@ -2656,6 +2659,7 @@ CLOSED: [2024-01-04 Do 00:44]
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
 riddles. This is Day 6 - see [[https:adventofcode.com/2023/day/6]]
+#+hugo: more
 *** Part 1
 
 #+begin_details
@@ -2868,7 +2872,7 @@ CLOSED: [2024-01-04 Do 00:45]
 
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 6 - siehe [[https:adventofcode.com/2023/day/6]]
-
+#+hugo: more
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
 ** DONE Advent of code 2023 - Day 7: Camel Cards :python:
 CLOSED: [2024-01-04 Do 16:32]
@@ -2878,6 +2882,7 @@ CLOSED: [2024-01-04 Do 16:32]
 
 This year I try to record my attempt at solving the *Advent of Code 2023*
 riddles. This is Day 7 - see [[https:adventofcode.com/2023/day/7]]
+#+hugo: more
 *** Part 1
 
 #+begin_details
@@ -3234,7 +3239,7 @@ CLOSED: [2024-01-04 Do 16:33]
 
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code
 2023*. Dies ist Tag 7 - siehe [[https:adventofcode.com/2023/day/7]]
-
+#+hugo: more
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
 
 ** DONE Advent of code 2024 - Day 1: Historian Hysteria :R:
@@ -3243,7 +3248,9 @@ CLOSED: [2024-12-07 Sa 00:22]
 :EXPORT_FILE_NAME: aoc2024-day01.en.md
 :END:
 
-I try to solve this year's *Advent of Code 2024* riddles in R. This is Day 1 - see [[https:adventofcode.com/2024/day/1]]
+I try to solve this year's *Advent of Code 2024* riddles in R. This is Day 1 -
+see [[https:adventofcode.com/2024/day/1]]
+#+hugo: more
 *** Part 1: Locations
 
 #+begin_details
@@ -3501,7 +3508,7 @@ CLOSED: [2024-12-07 Sa 00:23]
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code 2024*
 in der auf Statistik fokussierten Programmiersprache *R*. Dies ist Tag 1 - siehe
 [[https:adventofcode.com/2024/day/1]]
-
+#+hugo: more
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
 
 ** DONE Advent of code 2024 - Day 2: Red-Nosed Reports :R:
@@ -3510,7 +3517,9 @@ CLOSED: [2024-12-10 Di 01:43]
 :EXPORT_FILE_NAME: aoc2024-day02.en.md
 :END:
 
-I try to solve this year's *Advent of Code 2024* riddles in R. This is Day 2 - see [[https:adventofcode.com/2024/day/2]]
+I try to solve this year's *Advent of Code 2024* riddles in R. This is Day 2 -
+see [[https:adventofcode.com/2024/day/2]]
+#+hugo: more
 *** Part 1: Safe reports
 
 #+begin_details
@@ -3737,7 +3746,6 @@ sum(apply(data, 1, isreport2))
 328
 :END:
 
-
 ** DONE Advent of code 2024 - Tag 2: Rotnasige Berichte :R:
 CLOSED: [2024-12-10 Di 00:23]
 :PROPERTIES:
@@ -3747,9 +3755,9 @@ CLOSED: [2024-12-10 Di 00:23]
 Dieses Jahr versuche ich mich an den Herausforderungen des *Advent of Code 2024*
 in der auf Statistik fokussierten Programmiersprache *R*. Dies ist Tag 2 - siehe
 [[https:adventofcode.com/2024/day/2]]
+#+hugo: more
 
 Für die Lösungen siehe die englische Version dieses Blogbeitrages.
-
 
 ** TODO Advent of code 2024 - Day 3: Mull It Over :R:
 :PROPERTIES:
@@ -4093,7 +4101,6 @@ sum(df$result)
 :RESULTS:
 97728793
 :END:
-
 
 ** TODO Advent of code 2024 - Tag 3: ... :R:
 :PROPERTIES:

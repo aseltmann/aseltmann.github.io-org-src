@@ -1,7 +1,7 @@
 +++
 title = "Homepage"
 author = ["Alva Seltmann"]
-lastmod = 2025-02-08T18:27:28+01:00
+lastmod = 2025-02-09T19:36:19+01:00
 type = """
   "docs"
   """
@@ -13,17 +13,6 @@ BookComments = false
     weight = 1001
     identifier = "homepage"
 +++
-
-<div class="ox-hugo-toc toc">
-
-<div class="heading">Table of Contents</div>
-
-- [Hi, I'm Alva](#hi-i-m-alva)
-- [Contact](#contact)
-
-</div>
-<!--endtoc-->
-
 
 ## Hi, I'm Alva {#hi-i-m-alva}
 

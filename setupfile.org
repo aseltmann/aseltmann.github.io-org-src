@@ -12,7 +12,7 @@
 #+PROPERTY: header-args:jupyter-R+ :async yes
 #+PROPERTY: header-args:jupyter-R+ :kernel conda-env-r-base-r
 #+PROPERTY: header-args :eval never-export :exports both
-#+OPTIONS: toc:4
+#+OPTIONS: toc:nil
 #+OPTIONS: H:4
 #+HTML_HEAD_EXTRA: <style type="text/css">details:hover {background:pink;}</style>
 #+HTML_HEAD_EXTRA: <style type="text/css">table {display: block; overflow-x: auto; white-space: nowrap;}</style>

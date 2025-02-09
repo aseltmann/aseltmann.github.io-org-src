@@ -1,22 +1,11 @@
 +++
 title = "Homepage_de"
 author = ["Alva Seltmann"]
-lastmod = 2025-02-08T18:27:31+01:00
+lastmod = 2025-02-09T19:36:19+01:00
 draft = false
 creator = "Emacs 29.4 (Org mode 9.7.11 + ox-hugo)"
 BookComments = false
 +++
-
-<div class="ox-hugo-toc toc">
-
-<div class="heading">Table of Contents</div>
-
-- [Hallo, ich bin Alva](#hallo-ich-bin-alva)
-- [Kontakt](#kontakt)
-
-</div>
-<!--endtoc-->
-
 
 ## Hallo, ich bin Alva {#hallo-ich-bin-alva}
 

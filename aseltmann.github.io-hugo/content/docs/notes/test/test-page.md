@@ -1,27 +1,10 @@
 +++
 title = "Test page"
 author = ["Alva Seltmann"]
-lastmod = 2024-12-22T01:44:36+01:00
+lastmod = 2025-02-09T19:36:20+01:00
 draft = true
 creator = "Emacs 29.4 (Org mode 9.7.11 + ox-hugo)"
 +++
-
-<div class="ox-hugo-toc toc">
-
-<div class="heading">Table of Contents</div>
-
-- [Year numbering system](#year-numbering-system)
-- [Buttons](#buttons)
-- [Columns](#columns)
-- [Expand](#expand)
-- [Hints](#hints)
-- [Display Mode (KaTeX)](#display-mode--katex)
-- [Generate SVG charts and diagrams for text (Mermaid)](#generate-svg-charts-and-diagrams-for-text--mermaid)
-- [Tabs](#tabs)
-
-</div>
-<!--endtoc-->
-
 
 ## Year numbering system {#year-numbering-system}
 
